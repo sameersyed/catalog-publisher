@@ -18,6 +18,8 @@ const REQUEST_INTERVAL_MS = positiveInteger(process.env.SEC_REQUEST_INTERVAL_MS 
 const STATE_HOME = process.env.XDG_STATE_HOME || path.join(process.env.HOME, '.local', 'state');
 const STATE_PATH = path.join(STATE_HOME, 'stock-evidence-catalog', 'state.json');
 const INDEX_PATH = path.join(ROOT, 'catalog', 'index.json');
+const REQUESTED_TICKERS = (process.env.CATALOG_TICKERS || '').split(',')
+  .map(value => value.trim().toUpperCase()).filter(Boolean);
 let nextRequestAt = 0;
 
 if (!USER_AGENT || !/\S+@\S+\.\S+/.test(USER_AGENT)) {
@@ -102,7 +104,14 @@ async function main() {
   const universe = uniqueUniverse(tickerResponse.json);
   if (!universe.length) throw new Error('SEC ticker universe is empty; refusing to update the catalog.');
   const state = readJson(STATE_PATH, {cursor: ''});
-  const batch = selectBatch(universe, state, BATCH_SIZE);
+  const requested = new Set(REQUESTED_TICKERS);
+  const batch = requested.size ? {items: universe.filter(item => requested.has(item.ticker)), nextCursor: state.cursor} :
+    selectBatch(universe, state, BATCH_SIZE);
+  if (requested.size && batch.items.length !== requested.size) {
+    const found = new Set(batch.items.map(item => item.ticker));
+    throw new Error('Ticker(s) not found in SEC universe: ' +
+      Array.from(requested).filter(ticker => !found.has(ticker)).join(', '));
+  }
   const index = validExistingIndex(readJson(INDEX_PATH, null));
   const nextIndex = {...index, generatedAt: new Date().toISOString(), source: tickerResponse.source,
     issuers: {...index.issuers}};
@@ -118,8 +127,12 @@ async function main() {
   }
   if (!published) throw new Error(`No issuer was published; refusing to update the index. ${JSON.stringify(failures)}`);
   writeAtomic(INDEX_PATH, JSON.stringify(nextIndex, null, 2) + '\n');
-  writeAtomic(STATE_PATH, JSON.stringify({cursor: batch.nextCursor, lastRunAt: new Date().toISOString(),
-    universeSize: universe.length, attempted: batch.items.length, published, failures}, null, 2) + '\n');
+  const runState = {cursor: batch.nextCursor, lastRunAt: new Date().toISOString(),
+    mode: requested.size ? 'TARGETED' : 'UNIVERSE', universeSize: universe.length,
+    attempted: batch.items.length, published,
+    succeeded: batch.items.filter(item => !failures.some(failure => failure.ticker === item.ticker))
+      .map(item => item.ticker), failures};
+  writeAtomic(STATE_PATH, JSON.stringify(runState, null, 2) + '\n');
   console.log(JSON.stringify({status: failures.length ? 'PARTIAL' : 'PASS', universe: universe.length,
     attempted: batch.items.length, published, preserved: Object.keys(index.issuers).length,
     totalIndexed: Object.keys(nextIndex.issuers).length, nextCursor: batch.nextCursor,

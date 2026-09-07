@@ -22,23 +22,24 @@ The publisher does not commit or push. After a run, validate the complete catalo
 Treat validator failure as a hard stop.
 
 `run-catalog-publisher.sh` is the scheduled entry point. It prevents overlapping runs, refuses to
-touch a dirty catalog, runs the publisher and validator, and commits/pushes only validated catalog
-changes. Configure `SEC_USER_AGENT` outside Git and invoke it from cron or a systemd user timer. Logs
-must be monitored for `PARTIAL`, validator failures, and push failures.
+touch a dirty catalog, claims up to 250 private queue requests, publishes only their unique tickers,
+validates the catalog, and commits/pushes only validated catalog changes. Configure secrets outside
+Git. Logs must be monitored for `PARTIAL`, validator failures, and push failures.
 
 Install `stock-evidence-catalog.service` and `.timer` under `~/.config/systemd/user/`, and store the
 contact header in mode-600 `~/.config/stock-evidence/catalog.env`:
 
 ```text
 SEC_USER_AGENT=ZakatCalculator/3.0 contact@example.com
-CATALOG_BATCH_SIZE=250
 SEC_REQUEST_INTERVAL_MS=150
+QUEUE_URL=https://script.google.com/macros/s/DEPLOYMENT_ID/exec
+QUEUE_ADMIN_TOKEN_FILE=/home/stock-evidence/.config/stock-evidence/queue-admin-token
+PUBLISHER_GIT_NAME=Stock Evidence Publisher
+PUBLISHER_GIT_EMAIL=contact@example.com
 ```
 
 Enable lingering for the unprivileged account before relying on a user timer after logout. The timer
-runs daily with a randomized delay. At 250 issuers per run, a complete first pass over the current SEC
-ticker universe takes about six weeks; increase the batch only after observing SEC latency, errors,
-repository growth, and GitHub Raw behavior.
+runs daily with a randomized delay. Requests remain queued while the VM is offline.
 
 The publisher downloads SEC ticker, submissions, and Company Facts JSON; emits only compact
 normalized artifacts; and records source URL, retrieval timestamp, response hash, and response size.

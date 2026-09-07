@@ -19,14 +19,4 @@ if [ -n "$(git -C "$ROOT" status --porcelain -- catalog)" ]; then
   exit 1
 fi
 
-node "$PUBLISHER/publish-catalog.js" "$ROOT"
-node "$PUBLISHER/validate-poc.js" "$ROOT"
-
-if [ -z "$(git -C "$ROOT" status --porcelain -- catalog)" ]; then
-  printf '%s\n' 'Catalog is unchanged.'
-  exit 0
-fi
-
-git -C "$ROOT" add catalog
-git -C "$ROOT" commit -m "Publish SEC catalog batch"
-git -C "$ROOT" push
+node "$PUBLISHER/process-queue.js"
