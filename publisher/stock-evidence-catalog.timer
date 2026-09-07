@@ -1,0 +1,10 @@
+[Unit]
+Description=Run SEC Stock Evidence catalog publisher daily
+
+[Timer]
+OnCalendar=*-*-* 03:15:00
+Persistent=true
+RandomizedDelaySec=30m
+
+[Install]
+WantedBy=timers.target

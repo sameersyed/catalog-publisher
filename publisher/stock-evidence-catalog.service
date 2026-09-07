@@ -1,0 +1,11 @@
+[Unit]
+Description=Publish validated SEC Stock Evidence catalog batch
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+EnvironmentFile=%h/.config/stock-evidence/catalog.env
+ExecStart=%h/catalog-publisher/publisher/run-catalog-publisher.sh
+StandardOutput=journal
+StandardError=journal

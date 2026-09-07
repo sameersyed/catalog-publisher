@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "methodologyVersion": "aaofi-investor-v1",
+  "ticker": "A",
+  "issuer": "AGILENT TECHNOLOGIES, INC.",
+  "cik": "0001090872",
+  "sic": "3826",
+  "classification": "OPERATING_COMPANY",
+  "exchange": "NYSE",
+  "publishedAt": "2026-09-07T23:04:08.146Z",
+  "sources": {
+    "submissions": {
+      "url": "https://data.sec.gov/submissions/CIK0001090872.json",
+      "retrievedAt": "2026-09-07T23:04:08.245Z",
+      "bytes": 159006,
+      "sha256": "c4412d63414a73c46fe2ad1163ab79b6ed5853cba3d980b0e634bee1caddda44",
+      "latencyMs": 100
+    },
+    "companyFacts": {
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001090872.json",
+      "retrievedAt": "2026-09-07T23:04:08.949Z",
+      "bytes": 5118475,
+      "sha256": "c1dc449b186de4294c8dbdbb9e3b0f74eee3628c3fc5836652ff7ab8c2040ac9",
+      "latencyMs": 660
+    }
+  },
+  "filings": [
+    {
+      "form": "10-Q",
+      "filingDate": "2026-09-01",
+      "reportDate": "2026-07-31",
+      "accession": "0001090872-26-000064",
+      "primaryDocument": "a-20260731.htm",
+      "facts": {
+        "CashAndCashEquivalentsAtCarryingValue": 1758000000,
+        "AvailableForSaleSecuritiesDebtSecuritiesCurrent": null,
+        "MarketableSecuritiesCurrent": null,
+        "AccountsReceivableNetCurrent": 1478000000,
+        "AccountsNotesAndLoansReceivableNetCurrent": null,
+        "InventoryNet": 1117000000,
+        "OperatingLeaseLiabilityCurrent": null,
+        "LongTermDebtCurrent": null,
+        "ShortTermBorrowings": 304000000,
+        "AccruedSalariesCurrentAndNoncurrent": null,
+        "EmployeeRelatedLiabilitiesCurrent": 423000000,
+        "TaxesPayableCurrent": null,
+        "AccountsPayableAndOtherAccruedLiabilitiesCurrent": null,
+        "AccountsPayableCurrent": 608000000,
+        "LiabilitiesCurrent": 2289000000,
+        "ContractWithCustomerLiabilityCurrent": null,
+        "DeferredRevenueCurrent": 640000000
+      },
+      "sharesOutstanding": {
+        "value": 281928854,
+        "asOfDate": "2026-08-26"
+      }
+    },
+    {
+      "form": "10-Q",
+      "filingDate": "2026-06-01",
+      "reportDate": "2026-04-30",
+      "accession": "0001090872-26-000055",
+      "primaryDocument": "a-20260430.htm",
+      "facts": {
+        "CashAndCashEquivalentsAtCarryingValue": 1807000000,
+        "AvailableForSaleSecuritiesDebtSecuritiesCurrent": null,
+        "MarketableSecuritiesCurrent": null,
+        "AccountsReceivableNetCurrent": 1498000000,
+        "AccountsNotesAndLoansReceivableNetCurrent": null,
+        "InventoryNet": 1089000000,
+        "OperatingLeaseLiabilityCurrent": null,
+        "LongTermDebtCurrent": null,
+        "ShortTermBorrowings": 304000000,
+        "AccruedSalariesCurrentAndNoncurrent": null,
+        "EmployeeRelatedLiabilitiesCurrent": 387000000,
+        "TaxesPayableCurrent": null,
+        "AccountsPayableAndOtherAccruedLiabilitiesCurrent": null,
+        "AccountsPayableCurrent": 615000000,
+        "LiabilitiesCurrent": 2269000000,
+        "ContractWithCustomerLiabilityCurrent": null,
+        "DeferredRevenueCurrent": 665000000
+      },
+      "sharesOutstanding": {
+        "value": 282431944,
+        "asOfDate": "2026-05-27"
+      }
+    },
+    {
+      "form": "10-Q",
+      "filingDate": "2026-03-03",
+      "reportDate": "2026-01-31",
+      "accession": "0001090872-26-000023",
+      "primaryDocument": "a-20260131.htm",
+      "facts": {
+        "CashAndCashEquivalentsAtCarryingValue": 1758000000,
+        "AvailableForSaleSecuritiesDebtSecuritiesCurrent": null,
+        "MarketableSecuritiesCurrent": null,
+        "AccountsReceivableNetCurrent": 1521000000,
+        "AccountsNotesAndLoansReceivableNetCurrent": null,
+        "InventoryNet": 1059000000,
+        "OperatingLeaseLiabilityCurrent": null,
+        "LongTermDebtCurrent": null,
+        "ShortTermBorrowings": 304000000,
+        "AccruedSalariesCurrentAndNoncurrent": null,
+        "EmployeeRelatedLiabilitiesCurrent": 297000000,
+        "TaxesPayableCurrent": null,
+        "AccountsPayableAndOtherAccruedLiabilitiesCurrent": null,
+        "AccountsPayableCurrent": 602000000,
+        "LiabilitiesCurrent": 2234000000,
+        "ContractWithCustomerLiabilityCurrent": null,
+        "DeferredRevenueCurrent": 682000000
+      },
+      "sharesOutstanding": {
+        "value": 282602317,
+        "asOfDate": "2026-02-25"
+      }
+    },
+    {
+      "form": "10-K",
+      "filingDate": "2025-12-22",
+      "reportDate": "2025-10-31",
+      "accession": "0001090872-25-000087",
+      "primaryDocument": "a-20251031.htm",
+      "facts": {
+        "CashAndCashEquivalentsAtCarryingValue": 1789000000,
+        "AvailableForSaleSecuritiesDebtSecuritiesCurrent": null,
+        "MarketableSecuritiesCurrent": null,
+        "AccountsReceivableNetCurrent": 1487000000,
+        "AccountsNotesAndLoansReceivableNetCurrent": null,
+        "InventoryNet": 1025000000,
+        "OperatingLeaseLiabilityCurrent": 44000000,
+        "LongTermDebtCurrent": null,
+        "ShortTermBorrowings": 304000000,
+        "AccruedSalariesCurrentAndNoncurrent": null,
+        "EmployeeRelatedLiabilitiesCurrent": 443000000,
+        "TaxesPayableCurrent": null,
+        "AccountsPayableAndOtherAccruedLiabilitiesCurrent": null,
+        "AccountsPayableCurrent": 570000000,
+        "LiabilitiesCurrent": 2347000000,
+        "ContractWithCustomerLiabilityCurrent": null,
+        "DeferredRevenueCurrent": 624000000
+      },
+      "sharesOutstanding": {
+        "value": 283498871,
+        "asOfDate": "2025-12-10"
+      }
+    }
+  ]
+}
