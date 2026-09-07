@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-07T22:22:05.324Z",
+  "source": {
+    "url": "https://www.sec.gov/files/company_tickers.json",
+    "retrievedAt": "2026-09-07T22:22:05.322Z",
+    "bytes": 796994,
+    "sha256": "f987a9fba01e1c1858ddcf0c032d77be301843860d7a0571efaa92ec3f938926",
+    "latencyMs": 180
+  },
+  "issuers": {
+    "CRM": {
+      "cik": "0001108524",
+      "path": "catalog/issuers/0001108524.json",
+      "sha256": "d2425c52f8a349bb5b38435d12a86a8342ebd96b69b8797cead601715f80cf32",
+      "classification": "OPERATING_COMPANY"
+    },
+    "ORCL": {
+      "cik": "0001341439",
+      "path": "catalog/issuers/0001341439.json",
+      "sha256": "34427740540713ee536b0ada01693bed7a7c86d12c429790d8df5d07b05d2cf1",
+      "classification": "OPERATING_COMPANY"
+    }
+  }
+}

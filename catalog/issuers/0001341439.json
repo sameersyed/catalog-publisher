@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "methodologyVersion": "aaofi-investor-v1",
+  "ticker": "ORCL",
+  "issuer": "ORACLE CORP",
+  "cik": "0001341439",
+  "sic": "7372",
+  "classification": "OPERATING_COMPANY",
+  "exchange": "NYSE",
+  "publishedAt": "2026-09-07T22:22:05.849Z",
+  "sources": {
+    "submissions": {
+      "url": "https://data.sec.gov/submissions/CIK0001341439.json",
+      "retrievedAt": "2026-09-07T22:22:05.747Z",
+      "bytes": 158561,
+      "sha256": "c431ef8d2d24e1fdb729f77094bb9ccfde65ed89458237e10f18236ddb55ee89",
+      "latencyMs": 153
+    },
+    "companyFacts": {
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001341439.json",
+      "retrievedAt": "2026-09-07T22:22:05.841Z",
+      "bytes": 3914974,
+      "sha256": "60e4f8db39c9a84106bd02677f578db14a54c8bccabcdba2b828e595c32edeca",
+      "latencyMs": 251
+    }
+  },
+  "filings": [
+    {
+      "form": "10-K",
+      "filingDate": "2026-06-22",
+      "reportDate": "2026-05-31",
+      "accession": "0001193125-26-277521",
+      "primaryDocument": "orcl-20260531.htm",
+      "facts": {
+        "CashAndCashEquivalentsAtCarryingValue": 31289000000,
+        "AvailableForSaleSecuritiesDebtSecuritiesCurrent": 605000000,
+        "MarketableSecuritiesCurrent": null,
+        "AccountsReceivableNetCurrent": 10385000000,
+        "AccountsNotesAndLoansReceivableNetCurrent": null,
+        "InventoryNet": null,
+        "OperatingLeaseLiabilityCurrent": 3542000000,
+        "LongTermDebtCurrent": null,
+        "ShortTermBorrowings": null,
+        "AccruedSalariesCurrentAndNoncurrent": null,
+        "EmployeeRelatedLiabilitiesCurrent": 2225000000,
+        "TaxesPayableCurrent": null,
+        "AccountsPayableAndOtherAccruedLiabilitiesCurrent": null,
+        "AccountsPayableCurrent": 10977000000,
+        "LiabilitiesCurrent": 41764000000,
+        "ContractWithCustomerLiabilityCurrent": 9916000000,
+        "DeferredRevenueCurrent": null
+      },
+      "sharesOutstanding": {
+        "value": 2880471000,
+        "asOfDate": "2026-06-12"
+      }
+    },
+    {
+      "form": "10-Q",
+      "filingDate": "2026-03-11",
+      "reportDate": "2026-02-28",
+      "accession": "0001193125-26-101045",
+      "primaryDocument": "orcl-20260228.htm",
+      "facts": {
+        "CashAndCashEquivalentsAtCarryingValue": 38455000000,
+        "AvailableForSaleSecuritiesDebtSecuritiesCurrent": 677000000,
+        "MarketableSecuritiesCurrent": null,
+        "AccountsReceivableNetCurrent": 10719000000,
+        "AccountsNotesAndLoansReceivableNetCurrent": null,
+        "InventoryNet": null,
+        "OperatingLeaseLiabilityCurrent": 2798000000,
+        "LongTermDebtCurrent": null,
+        "ShortTermBorrowings": null,
+        "AccruedSalariesCurrentAndNoncurrent": null,
+        "EmployeeRelatedLiabilitiesCurrent": 1940000000,
+        "TaxesPayableCurrent": null,
+        "AccountsPayableAndOtherAccruedLiabilitiesCurrent": null,
+        "AccountsPayableCurrent": 9474000000,
+        "LiabilitiesCurrent": 40737000000,
+        "ContractWithCustomerLiabilityCurrent": 9881000000,
+        "DeferredRevenueCurrent": null
+      },
+      "sharesOutstanding": {
+        "value": 2876046000,
+        "asOfDate": "2026-03-05"
+      }
+    },
+    {
+      "form": "10-Q",
+      "filingDate": "2025-12-11",
+      "reportDate": "2025-11-30",
+      "accession": "0001193125-25-315925",
+      "primaryDocument": "orcl-20251130.htm",
+      "facts": {
+        "CashAndCashEquivalentsAtCarryingValue": 19241000000,
+        "AvailableForSaleSecuritiesDebtSecuritiesCurrent": 525000000,
+        "MarketableSecuritiesCurrent": null,
+        "AccountsReceivableNetCurrent": 9440000000,
+        "AccountsNotesAndLoansReceivableNetCurrent": null,
+        "InventoryNet": null,
+        "OperatingLeaseLiabilityCurrent": 2368000000,
+        "LongTermDebtCurrent": null,
+        "ShortTermBorrowings": null,
+        "AccruedSalariesCurrentAndNoncurrent": null,
+        "EmployeeRelatedLiabilitiesCurrent": 1947000000,
+        "TaxesPayableCurrent": null,
+        "AccountsPayableAndOtherAccruedLiabilitiesCurrent": null,
+        "AccountsPayableCurrent": 10140000000,
+        "LiabilitiesCurrent": 37795000000,
+        "ContractWithCustomerLiabilityCurrent": 9940000000,
+        "DeferredRevenueCurrent": null
+      },
+      "sharesOutstanding": {
+        "value": 2873130000,
+        "asOfDate": "2025-12-05"
+      }
+    },
+    {
+      "form": "10-Q",
+      "filingDate": "2025-09-10",
+      "reportDate": "2025-08-31",
+      "accession": "0001193125-25-200095",
+      "primaryDocument": "orcl-20250831.htm",
+      "facts": {
+        "CashAndCashEquivalentsAtCarryingValue": 10445000000,
+        "AvailableForSaleSecuritiesDebtSecuritiesCurrent": 560000000,
+        "MarketableSecuritiesCurrent": null,
+        "AccountsReceivableNetCurrent": 8843000000,
+        "AccountsNotesAndLoansReceivableNetCurrent": null,
+        "InventoryNet": null,
+        "OperatingLeaseLiabilityCurrent": 2196000000,
+        "LongTermDebtCurrent": null,
+        "ShortTermBorrowings": null,
+        "AccruedSalariesCurrentAndNoncurrent": null,
+        "EmployeeRelatedLiabilitiesCurrent": 1794000000,
+        "TaxesPayableCurrent": null,
+        "AccountsPayableAndOtherAccruedLiabilitiesCurrent": null,
+        "AccountsPayableCurrent": 8203000000,
+        "LiabilitiesCurrent": 39874000000,
+        "ContractWithCustomerLiabilityCurrent": 12098000000,
+        "DeferredRevenueCurrent": null
+      },
+      "sharesOutstanding": {
+        "value": 2841714000,
+        "asOfDate": "2025-09-05"
+      }
+    }
+  ]
+}
