@@ -1,27 +1,27 @@
 {
   "schemaVersion": 1,
-  "methodologyVersion": "aaofi-investor-v1",
+  "methodologyVersion": "aaofi-investor-v2",
   "ticker": "AAPL",
   "issuer": "Apple Inc.",
   "cik": "0000320193",
   "sic": "3571",
   "classification": "OPERATING_COMPANY",
   "exchange": "Nasdaq",
-  "publishedAt": "2026-09-08T00:33:00.344Z",
+  "publishedAt": "2026-09-08T00:40:20.497Z",
   "sources": {
     "submissions": {
       "url": "https://data.sec.gov/submissions/CIK0000320193.json",
-      "retrievedAt": "2026-09-08T00:33:00.457Z",
+      "retrievedAt": "2026-09-08T00:40:20.593Z",
       "bytes": 164121,
       "sha256": "7c67278a0c4009db2cfd62ac23fbdb16d935867ad44fdfde9eaef77837386440",
-      "latencyMs": 116
+      "latencyMs": 96
     },
     "companyFacts": {
       "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
-      "retrievedAt": "2026-09-08T00:33:00.689Z",
+      "retrievedAt": "2026-09-08T00:40:20.877Z",
       "bytes": 3789099,
       "sha256": "73a86c6aedc31f77cac2ea4df5f80f0b3bd7e6eb58bb4e01444fbedf3afb9c43",
-      "latencyMs": 201
+      "latencyMs": 237
     }
   },
   "filings": [
@@ -106,10 +106,10 @@
       },
       "filingSource": {
         "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
-        "retrievedAt": "2026-09-08T00:33:00.795Z",
+        "retrievedAt": "2026-09-08T00:40:20.985Z",
         "bytes": 1018210,
         "sha256": "4ad5bea67cedfa7542d623900355cc8d143ef95c1acc135a597f2eedabdb9177",
-        "latencyMs": 101
+        "latencyMs": 106
       },
       "sharesOutstanding": {
         "value": 14594180000,
@@ -197,10 +197,10 @@
       },
       "filingSource": {
         "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/aapl-20260328.htm",
-        "retrievedAt": "2026-09-08T00:33:00.992Z",
+        "retrievedAt": "2026-09-08T00:40:21.156Z",
         "bytes": 999810,
         "sha256": "bb90060d61a273e51b5a472d65ae15d8b51bfd037ddf91e559f9d9adfe2a0228",
-        "latencyMs": 146
+        "latencyMs": 127
       },
       "sharesOutstanding": {
         "value": 14687356000,
@@ -288,10 +288,10 @@
       },
       "filingSource": {
         "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/aapl-20251227.htm",
-        "retrievedAt": "2026-09-08T00:33:01.129Z",
+        "retrievedAt": "2026-09-08T00:40:21.312Z",
         "bytes": 765973,
         "sha256": "3a3d9336a924488440e83b811ba354f654738cc822b6eb69ed6063e8cf348542",
-        "latencyMs": 133
+        "latencyMs": 129
       },
       "sharesOutstanding": {
         "value": 14681140000,
@@ -387,10 +387,10 @@
       },
       "filingSource": {
         "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
-        "retrievedAt": "2026-09-08T00:33:01.286Z",
+        "retrievedAt": "2026-09-08T00:40:21.463Z",
         "bytes": 1520208,
         "sha256": "548ae59778cf08ee0f2ee088e7ece20d947076c3c01f74d2d65db4c2777e436a",
-        "latencyMs": 143
+        "latencyMs": 133
       },
       "sharesOutstanding": {
         "value": 14776353000,

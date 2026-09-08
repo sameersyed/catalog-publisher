@@ -23,7 +23,7 @@ for (const [ticker, entry] of Object.entries(index.issuers)) {
   if (digest !== entry.sha256) throw new Error(`${ticker} artifact hash mismatch.`);
   const artifact = JSON.parse(text);
   if (artifact.schemaVersion !== 1 || artifact.ticker !== ticker || artifact.cik !== entry.cik ||
-      artifact.methodologyVersion !== 'aaofi-investor-v1' || !artifact.sources ||
+      artifact.methodologyVersion !== 'aaofi-investor-v2' || !artifact.sources ||
       !Array.isArray(artifact.filings) || !artifact.filings.length) {
     throw new Error(`${ticker} artifact schema is invalid.`);
   }

@@ -1,27 +1,27 @@
 {
   "schemaVersion": 1,
-  "methodologyVersion": "aaofi-investor-v1",
+  "methodologyVersion": "aaofi-investor-v2",
   "ticker": "A",
   "issuer": "AGILENT TECHNOLOGIES, INC.",
   "cik": "0001090872",
   "sic": "3826",
   "classification": "OPERATING_COMPANY",
   "exchange": "NYSE",
-  "publishedAt": "2026-09-08T00:32:59.040Z",
+  "publishedAt": "2026-09-08T00:40:19.326Z",
   "sources": {
     "submissions": {
       "url": "https://data.sec.gov/submissions/CIK0001090872.json",
-      "retrievedAt": "2026-09-08T00:32:59.297Z",
+      "retrievedAt": "2026-09-08T00:40:19.444Z",
       "bytes": 159006,
       "sha256": "c4412d63414a73c46fe2ad1163ab79b6ed5853cba3d980b0e634bee1caddda44",
-      "latencyMs": 258
+      "latencyMs": 119
     },
     "companyFacts": {
       "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001090872.json",
-      "retrievedAt": "2026-09-08T00:32:59.656Z",
+      "retrievedAt": "2026-09-08T00:40:19.830Z",
       "bytes": 5118475,
       "sha256": "c1dc449b186de4294c8dbdbb9e3b0f74eee3628c3fc5836652ff7ab8c2040ac9",
-      "latencyMs": 473
+      "latencyMs": 363
     }
   },
   "filings": [
@@ -98,10 +98,10 @@
       },
       "filingSource": {
         "url": "https://www.sec.gov/Archives/edgar/data/1090872/000109087226000064/a-20260731.htm",
-        "retrievedAt": "2026-09-08T00:32:59.812Z",
+        "retrievedAt": "2026-09-08T00:40:19.973Z",
         "bytes": 2187617,
         "sha256": "3371118ce001add95fa944b2d828bf6a7b1e74578e316608a525f1cbbfae8ddf",
-        "latencyMs": 151
+        "latencyMs": 136
       },
       "sharesOutstanding": {
         "value": 281928854,
@@ -181,10 +181,10 @@
       },
       "filingSource": {
         "url": "https://www.sec.gov/Archives/edgar/data/1090872/000109087226000055/a-20260430.htm",
-        "retrievedAt": "2026-09-08T00:32:59.956Z",
+        "retrievedAt": "2026-09-08T00:40:20.126Z",
         "bytes": 2051977,
         "sha256": "4fdc1e2c6130156c099140df4258ce7fa04d7c4cd737ae0574e733a9f512f80f",
-        "latencyMs": 144
+        "latencyMs": 142
       },
       "sharesOutstanding": {
         "value": 282431944,
@@ -264,10 +264,10 @@
       },
       "filingSource": {
         "url": "https://www.sec.gov/Archives/edgar/data/1090872/000109087226000023/a-20260131.htm",
-        "retrievedAt": "2026-09-08T00:33:00.104Z",
+        "retrievedAt": "2026-09-08T00:40:20.267Z",
         "bytes": 1581854,
         "sha256": "cbd1969f067882f2a6dcd4aa37a838b78efa1bf5e27b74447a65e556fc98fa59",
-        "latencyMs": 136
+        "latencyMs": 129
       },
       "sharesOutstanding": {
         "value": 282602317,
@@ -362,10 +362,10 @@
       },
       "filingSource": {
         "url": "https://www.sec.gov/Archives/edgar/data/1090872/000109087225000087/a-20251031.htm",
-        "retrievedAt": "2026-09-08T00:33:00.302Z",
+        "retrievedAt": "2026-09-08T00:40:20.456Z",
         "bytes": 3706984,
         "sha256": "a03c867e9093202268f1dd3613e3d6d251ae146ec473f483eb0fc0cabe7da7af",
-        "latencyMs": 188
+        "latencyMs": 171
       },
       "sharesOutstanding": {
         "value": 283498871,

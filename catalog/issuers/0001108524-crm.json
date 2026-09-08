@@ -1,27 +1,27 @@
 {
   "schemaVersion": 1,
-  "methodologyVersion": "aaofi-investor-v1",
+  "methodologyVersion": "aaofi-investor-v2",
   "ticker": "CRM",
   "issuer": "Salesforce, Inc.",
   "cik": "0001108524",
   "sic": "7372",
   "classification": "OPERATING_COMPANY",
   "exchange": "NYSE",
-  "publishedAt": "2026-09-08T00:33:01.317Z",
+  "publishedAt": "2026-09-08T00:40:21.492Z",
   "sources": {
     "submissions": {
       "url": "https://data.sec.gov/submissions/CIK0001108524.json",
-      "retrievedAt": "2026-09-08T00:33:01.403Z",
+      "retrievedAt": "2026-09-08T00:40:21.629Z",
       "bytes": 156331,
       "sha256": "8bc6251578f68e9ddd6fff0c00254179ad3a2f073afeb6121d48d1888afd4ea0",
-      "latencyMs": 86
+      "latencyMs": 138
     },
     "companyFacts": {
       "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001108524.json",
-      "retrievedAt": "2026-09-08T00:33:01.746Z",
+      "retrievedAt": "2026-09-08T00:40:21.886Z",
       "bytes": 4728737,
       "sha256": "000745962bc36a66c6bfaddc7062cf124a17231958b76b4f7606dd4aec5e230c",
-      "latencyMs": 288
+      "latencyMs": 253
     }
   },
   "filings": [
@@ -100,10 +100,10 @@
       },
       "filingSource": {
         "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000190/crm-20260731.htm",
-        "retrievedAt": "2026-09-08T00:33:01.892Z",
+        "retrievedAt": "2026-09-08T00:40:22.019Z",
         "bytes": 2126451,
         "sha256": "a6d4da1fbe51d6a2296bfc4c42e9fb1f0d971a57b5b46c891db0b45a85e8a478",
-        "latencyMs": 138
+        "latencyMs": 128
       },
       "sharesOutstanding": {
         "value": 823000000,
@@ -185,10 +185,10 @@
       },
       "filingSource": {
         "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000127/crm-20260430.htm",
-        "retrievedAt": "2026-09-08T00:33:02.051Z",
+        "retrievedAt": "2026-09-08T00:40:22.220Z",
         "bytes": 1737941,
         "sha256": "b9a2f92b194cfdced066819daf5d7ae24541ea39ef72b0305ce8d3c68ace9817",
-        "latencyMs": 147
+        "latencyMs": 182
       },
       "sharesOutstanding": {
         "value": 819000000,
@@ -276,10 +276,10 @@
       },
       "filingSource": {
         "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000060/crm-20260131.htm",
-        "retrievedAt": "2026-09-08T00:33:02.199Z",
+        "retrievedAt": "2026-09-08T00:40:22.357Z",
         "bytes": 2570278,
         "sha256": "d606b8cc64176cbfa8c75355a9c935ec83f6b8374a87f94f3747941633fa8d25",
-        "latencyMs": 144
+        "latencyMs": 126
       },
       "sharesOutstanding": {
         "value": 923000000,
@@ -361,10 +361,10 @@
       },
       "filingSource": {
         "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852425000238/crm-20251031.htm",
-        "retrievedAt": "2026-09-08T00:33:02.348Z",
+        "retrievedAt": "2026-09-08T00:40:22.543Z",
         "bytes": 2140799,
         "sha256": "c244c50e275237160d1b3e50158208d6e299e8c84753223ffe6594359e5cb38a",
-        "latencyMs": 143
+        "latencyMs": 161
       },
       "sharesOutstanding": {
         "value": 937000000,

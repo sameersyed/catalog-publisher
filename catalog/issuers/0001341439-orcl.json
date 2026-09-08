@@ -1,27 +1,27 @@
 {
   "schemaVersion": 1,
-  "methodologyVersion": "aaofi-investor-v1",
+  "methodologyVersion": "aaofi-investor-v2",
   "ticker": "ORCL",
   "issuer": "ORACLE CORP",
   "cik": "0001341439",
   "sic": "7372",
   "classification": "OPERATING_COMPANY",
   "exchange": "NYSE",
-  "publishedAt": "2026-09-08T00:33:02.379Z",
+  "publishedAt": "2026-09-08T00:40:22.563Z",
   "sources": {
     "submissions": {
       "url": "https://data.sec.gov/submissions/CIK0001341439.json",
-      "retrievedAt": "2026-09-08T00:33:02.467Z",
+      "retrievedAt": "2026-09-08T00:40:22.644Z",
       "bytes": 158561,
       "sha256": "c431ef8d2d24e1fdb729f77094bb9ccfde65ed89458237e10f18236ddb55ee89",
-      "latencyMs": 89
+      "latencyMs": 81
     },
     "companyFacts": {
       "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001341439.json",
-      "retrievedAt": "2026-09-08T00:33:02.694Z",
+      "retrievedAt": "2026-09-08T00:40:22.950Z",
       "bytes": 3914974,
       "sha256": "60e4f8db39c9a84106bd02677f578db14a54c8bccabcdba2b828e595c32edeca",
-      "latencyMs": 172
+      "latencyMs": 245
     }
   },
   "filings": [
@@ -107,10 +107,10 @@
       },
       "filingSource": {
         "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
-        "retrievedAt": "2026-09-08T00:33:02.866Z",
+        "retrievedAt": "2026-09-08T00:40:23.135Z",
         "bytes": 6873937,
         "sha256": "6cd094af28aa16098cad795bf785be1866d69e59605aed1d6aef75a911a5766b",
-        "latencyMs": 177
+        "latencyMs": 192
       },
       "sharesOutstanding": {
         "value": 2880471000,
@@ -199,10 +199,10 @@
       },
       "filingSource": {
         "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526101045/orcl-20260228.htm",
-        "retrievedAt": "2026-09-08T00:33:03.033Z",
+        "retrievedAt": "2026-09-08T00:40:23.314Z",
         "bytes": 4172832,
         "sha256": "e7c7cc92bc79c63d11a6392e76432cf836467d1cb5c2f8e07743d05b6c5675d2",
-        "latencyMs": 158
+        "latencyMs": 169
       },
       "sharesOutstanding": {
         "value": 2876046000,
@@ -290,10 +290,10 @@
       },
       "filingSource": {
         "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312525315925/orcl-20251130.htm",
-        "retrievedAt": "2026-09-08T00:33:03.184Z",
+        "retrievedAt": "2026-09-08T00:40:23.473Z",
         "bytes": 3771598,
         "sha256": "313af69a5a7d098b0187141bc1e5b9952c7ae9a4a6dc50574f2067a8a22f31ae",
-        "latencyMs": 144
+        "latencyMs": 157
       },
       "sharesOutstanding": {
         "value": 2873130000,
@@ -381,10 +381,10 @@
       },
       "filingSource": {
         "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312525200095/orcl-20250831.htm",
-        "retrievedAt": "2026-09-08T00:33:03.338Z",
+        "retrievedAt": "2026-09-08T00:40:23.618Z",
         "bytes": 2625821,
         "sha256": "97f1bf7e5033da42c30a7c824cede973ff092bd6dca9702df8371373760835bd",
-        "latencyMs": 147
+        "latencyMs": 137
       },
       "sharesOutstanding": {
         "value": 2841714000,

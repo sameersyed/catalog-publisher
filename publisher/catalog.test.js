@@ -42,6 +42,7 @@ test('builds a compact operating-company artifact and hash entry', () => {
   const artifact = buildArtifact('EXM', '0000000001', data.submissions, data.facts,
     '2026-09-07T00:00:00.000Z');
   assert.equal(artifact.classification, 'OPERATING_COMPANY');
+  assert.equal(artifact.methodologyVersion, 'aaofi-investor-v2');
   assert.equal(artifact.filings[0].facts.CashAndCashEquivalentsAtCarryingValue, 42);
   assert.equal(artifact.filings[0].sharesOutstanding.value, 10);
   const text = JSON.stringify(artifact) + '\n';

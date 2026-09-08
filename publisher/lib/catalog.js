@@ -190,7 +190,7 @@ function buildArtifact(ticker, cik, submissionsResponse, factsResponse, now, fil
   if (!filings.length) throw new Error(`${ticker} has no recent 10-Q or 10-K filing.`);
   return {
     schemaVersion: 1,
-    methodologyVersion: 'aaofi-investor-v1',
+    methodologyVersion: 'aaofi-investor-v2',
     ticker,
     issuer: submissions.name,
     cik,
