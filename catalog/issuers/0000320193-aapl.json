@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "methodologyVersion": "aaofi-investor-v1",
+  "ticker": "AAPL",
+  "issuer": "Apple Inc.",
+  "cik": "0000320193",
+  "sic": "3571",
+  "classification": "OPERATING_COMPANY",
+  "exchange": "Nasdaq",
+  "publishedAt": "2026-09-08T00:07:20.928Z",
+  "sources": {
+    "submissions": {
+      "url": "https://data.sec.gov/submissions/CIK0000320193.json",
+      "retrievedAt": "2026-09-08T00:07:21.035Z",
+      "bytes": 164121,
+      "sha256": "7c67278a0c4009db2cfd62ac23fbdb16d935867ad44fdfde9eaef77837386440",
+      "latencyMs": 108
+    },
+    "companyFacts": {
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+      "retrievedAt": "2026-09-08T00:07:21.291Z",
+      "bytes": 3789099,
+      "sha256": "73a86c6aedc31f77cac2ea4df5f80f0b3bd7e6eb58bb4e01444fbedf3afb9c43",
+      "latencyMs": 220
+    }
+  },
+  "filings": [
+    {
+      "form": "10-Q",
+      "filingDate": "2026-07-31",
+      "reportDate": "2026-06-27",
+      "accession": "0000320193-26-000020",
+      "primaryDocument": "aapl-20260627.htm",
+      "facts": {
+        "CashAndCashEquivalentsAtCarryingValue": 39544000000,
+        "AvailableForSaleSecuritiesDebtSecuritiesCurrent": null,
+        "MarketableSecuritiesCurrent": 22855000000,
+        "AccountsReceivableNetCurrent": 31398000000,
+        "AccountsNotesAndLoansReceivableNetCurrent": null,
+        "InventoryNet": 11092000000,
+        "OperatingLeaseLiabilityCurrent": null,
+        "LongTermDebtCurrent": 11007000000,
+        "ShortTermBorrowings": null,
+        "AccruedSalariesCurrentAndNoncurrent": null,
+        "EmployeeRelatedLiabilitiesCurrent": null,
+        "TaxesPayableCurrent": null,
+        "AccountsPayableAndOtherAccruedLiabilitiesCurrent": null,
+        "AccountsPayableCurrent": 64525000000,
+        "LiabilitiesCurrent": 149326000000,
+        "ContractWithCustomerLiabilityCurrent": 9538000000,
+        "DeferredRevenueCurrent": null
+      },
+      "sharesOutstanding": {
+        "value": 14594180000,
+        "asOfDate": "2026-07-17"
+      }
+    },
+    {
+      "form": "10-Q",
+      "filingDate": "2026-05-01",
+      "reportDate": "2026-03-28",
+      "accession": "0000320193-26-000013",
+      "primaryDocument": "aapl-20260328.htm",
+      "facts": {
+        "CashAndCashEquivalentsAtCarryingValue": 45572000000,
+        "AvailableForSaleSecuritiesDebtSecuritiesCurrent": null,
+        "MarketableSecuritiesCurrent": 22935000000,
+        "AccountsReceivableNetCurrent": 30339000000,
+        "AccountsNotesAndLoansReceivableNetCurrent": null,
+        "InventoryNet": 6747000000,
+        "OperatingLeaseLiabilityCurrent": null,
+        "LongTermDebtCurrent": 8310000000,
+        "ShortTermBorrowings": null,
+        "AccruedSalariesCurrentAndNoncurrent": null,
+        "EmployeeRelatedLiabilitiesCurrent": null,
+        "TaxesPayableCurrent": null,
+        "AccountsPayableAndOtherAccruedLiabilitiesCurrent": null,
+        "AccountsPayableCurrent": 57349000000,
+        "LiabilitiesCurrent": 134641000000,
+        "ContractWithCustomerLiabilityCurrent": 9331000000,
+        "DeferredRevenueCurrent": null
+      },
+      "sharesOutstanding": {
+        "value": 14687356000,
+        "asOfDate": "2026-04-17"
+      }
+    },
+    {
+      "form": "10-Q",
+      "filingDate": "2026-01-30",
+      "reportDate": "2025-12-27",
+      "accession": "0000320193-26-000006",
+      "primaryDocument": "aapl-20251227.htm",
+      "facts": {
+        "CashAndCashEquivalentsAtCarryingValue": 45317000000,
+        "AvailableForSaleSecuritiesDebtSecuritiesCurrent": null,
+        "MarketableSecuritiesCurrent": 21590000000,
+        "AccountsReceivableNetCurrent": 39921000000,
+        "AccountsNotesAndLoansReceivableNetCurrent": null,
+        "InventoryNet": 5875000000,
+        "OperatingLeaseLiabilityCurrent": null,
+        "LongTermDebtCurrent": 11827000000,
+        "ShortTermBorrowings": null,
+        "AccruedSalariesCurrentAndNoncurrent": null,
+        "EmployeeRelatedLiabilitiesCurrent": null,
+        "TaxesPayableCurrent": null,
+        "AccountsPayableAndOtherAccruedLiabilitiesCurrent": null,
+        "AccountsPayableCurrent": 70587000000,
+        "LiabilitiesCurrent": 162367000000,
+        "ContractWithCustomerLiabilityCurrent": 9413000000,
+        "DeferredRevenueCurrent": null
+      },
+      "sharesOutstanding": {
+        "value": 14681140000,
+        "asOfDate": "2026-01-16"
+      }
+    },
+    {
+      "form": "10-K",
+      "filingDate": "2025-10-31",
+      "reportDate": "2025-09-27",
+      "accession": "0000320193-25-000079",
+      "primaryDocument": "aapl-20250927.htm",
+      "facts": {
+        "CashAndCashEquivalentsAtCarryingValue": 35934000000,
+        "AvailableForSaleSecuritiesDebtSecuritiesCurrent": null,
+        "MarketableSecuritiesCurrent": 18763000000,
+        "AccountsReceivableNetCurrent": 39777000000,
+        "AccountsNotesAndLoansReceivableNetCurrent": null,
+        "InventoryNet": 5718000000,
+        "OperatingLeaseLiabilityCurrent": 1579000000,
+        "LongTermDebtCurrent": 12350000000,
+        "ShortTermBorrowings": null,
+        "AccruedSalariesCurrentAndNoncurrent": null,
+        "EmployeeRelatedLiabilitiesCurrent": null,
+        "TaxesPayableCurrent": null,
+        "AccountsPayableAndOtherAccruedLiabilitiesCurrent": null,
+        "AccountsPayableCurrent": 69860000000,
+        "LiabilitiesCurrent": 165631000000,
+        "ContractWithCustomerLiabilityCurrent": 9055000000,
+        "DeferredRevenueCurrent": null
+      },
+      "sharesOutstanding": {
+        "value": 14776353000,
+        "asOfDate": "2025-10-17"
+      }
+    }
+  ]
+}

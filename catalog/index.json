@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-07T23:55:15.601Z",
+  "generatedAt": "2026-09-08T00:07:20.928Z",
   "source": {
     "url": "https://www.sec.gov/files/company_tickers.json",
-    "retrievedAt": "2026-09-07T23:55:15.554Z",
+    "retrievedAt": "2026-09-08T00:07:20.880Z",
     "bytes": 796994,
     "sha256": "f987a9fba01e1c1858ddcf0c032d77be301843860d7a0571efaa92ec3f938926",
-    "latencyMs": 191
+    "latencyMs": 177
   },
   "issuers": {
     "CRM": {
@@ -25,6 +25,12 @@
       "cik": "0001090872",
       "path": "catalog/issuers/0001090872-a.json",
       "sha256": "19bb0bd87409c056013ab24261763ce141a135058a6dcfe3fbf0f127b80741df",
+      "classification": "OPERATING_COMPANY"
+    },
+    "AAPL": {
+      "cik": "0000320193",
+      "path": "catalog/issuers/0000320193-aapl.json",
+      "sha256": "b953989aa524d17f22ac758d67f45a55979104dcc408ce907b7f752a92cbec3c",
       "classification": "OPERATING_COMPANY"
     }
   }
