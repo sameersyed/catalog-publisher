@@ -6,7 +6,7 @@ const fs = require('fs');
 const https = require('https');
 const path = require('path');
 const zlib = require('zlib');
-const {artifactEntry, buildArtifact, selectBatch, uniqueUniverse} = require('./lib/catalog');
+const {artifactEntry, buildArtifact, currentFilings, selectBatch, uniqueUniverse} = require('./lib/catalog');
 
 const SEC_BASE = 'https://data.sec.gov';
 const TICKER_MAP = 'https://www.sec.gov/files/company_tickers.json';
@@ -68,6 +68,37 @@ async function request(url) {
   });
 }
 
+async function requestText(url) {
+  const response = await requestBuffer(url);
+  return {text: response.body.toString('utf8'), source: response.source};
+}
+
+async function requestBuffer(url) {
+  const wait = Math.max(0, nextRequestAt - Date.now());
+  if (wait) await sleep(wait);
+  nextRequestAt = Date.now() + REQUEST_INTERVAL_MS;
+  return new Promise((resolve, reject) => {
+    const started = Date.now();
+    https.get(url, {headers: {'User-Agent': USER_AGENT, 'Accept-Encoding': 'gzip, deflate'}}, response => {
+      const chunks = [];
+      response.on('data', chunk => chunks.push(chunk));
+      response.on('end', () => {
+        const encoded = Buffer.concat(chunks);
+        if (response.statusCode !== 200) return reject(new Error(`${url} returned HTTP ${response.statusCode}`));
+        try {
+          const encoding = response.headers['content-encoding'];
+          const body = encoding === 'gzip' ? zlib.gunzipSync(encoded) :
+            encoding === 'deflate' ? zlib.inflateSync(encoded) : encoded;
+          resolve({body, source: {url, retrievedAt: new Date().toISOString(), bytes: body.length,
+            sha256: crypto.createHash('sha256').update(body).digest('hex'), latencyMs: Date.now() - started}});
+        } catch (error) {
+          reject(new Error(`${url} could not be decoded: ${error.message}`));
+        }
+      });
+    }).on('error', reject);
+  });
+}
+
 function readJson(file, fallback) {
   return fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, 'utf8')) : fallback;
 }
@@ -91,7 +122,14 @@ async function publishIssuer(item, now) {
     request(`${SEC_BASE}/submissions/CIK${item.cik}.json`),
     request(`${SEC_BASE}/api/xbrl/companyfacts/CIK${item.cik}.json`)
   ]);
-  const artifact = buildArtifact(item.ticker, item.cik, submissionsResponse, factsResponse, now);
+  const filings = currentFilings(submissionsResponse.json).slice(0, 4);
+  const filingResponses = [];
+  for (const filing of filings) {
+    const accession = filing.accession.replace(/-/g, '');
+    filingResponses.push(await requestText(`https://www.sec.gov/Archives/edgar/data/${Number(item.cik)}/${accession}/${filing.primaryDocument}`));
+  }
+  const artifact = buildArtifact(item.ticker, item.cik, submissionsResponse, factsResponse, now,
+    filingResponses);
   const fileTicker = item.ticker.toLowerCase().replace(/[^a-z0-9-]/g, '-');
   const relativePath = `catalog/issuers/${item.cik}-${fileTicker}.json`;
   const text = JSON.stringify(artifact, null, 2) + '\n';

@@ -1,36 +1,36 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-08T00:07:20.928Z",
+  "generatedAt": "2026-09-08T00:32:59.040Z",
   "source": {
     "url": "https://www.sec.gov/files/company_tickers.json",
-    "retrievedAt": "2026-09-08T00:07:20.880Z",
+    "retrievedAt": "2026-09-08T00:32:58.994Z",
     "bytes": 796994,
     "sha256": "f987a9fba01e1c1858ddcf0c032d77be301843860d7a0571efaa92ec3f938926",
-    "latencyMs": 177
+    "latencyMs": 207
   },
   "issuers": {
     "CRM": {
       "cik": "0001108524",
       "path": "catalog/issuers/0001108524-crm.json",
-      "sha256": "b79c992cb2429a6c51fa3cc2de4b800ad45bc2769af47e579ee251cf4336475c",
+      "sha256": "75b84417569230af924e8e3d096af73c68317b6b8d8d927883bee65784364cb3",
       "classification": "OPERATING_COMPANY"
     },
     "ORCL": {
       "cik": "0001341439",
-      "path": "catalog/issuers/0001341439.json",
-      "sha256": "34427740540713ee536b0ada01693bed7a7c86d12c429790d8df5d07b05d2cf1",
+      "path": "catalog/issuers/0001341439-orcl.json",
+      "sha256": "03457836612319f5f05bb636a1b4e81acbf2fffd3df2c648e5e1553e9fa241e1",
       "classification": "OPERATING_COMPANY"
     },
     "A": {
       "cik": "0001090872",
       "path": "catalog/issuers/0001090872-a.json",
-      "sha256": "19bb0bd87409c056013ab24261763ce141a135058a6dcfe3fbf0f127b80741df",
+      "sha256": "961abf754384d157157773fd12673718f28f48e2449ff9f7c4cba1c252718ffe",
       "classification": "OPERATING_COMPANY"
     },
     "AAPL": {
       "cik": "0000320193",
       "path": "catalog/issuers/0000320193-aapl.json",
-      "sha256": "b953989aa524d17f22ac758d67f45a55979104dcc408ce907b7f752a92cbec3c",
+      "sha256": "f1f78647092966f2689605fe10eda8b311c7222cff722098fed0a7c8bf801fac",
       "classification": "OPERATING_COMPANY"
     }
   }

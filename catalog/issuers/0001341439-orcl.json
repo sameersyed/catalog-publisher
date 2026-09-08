@@ -1,0 +1,395 @@
+{
+  "schemaVersion": 1,
+  "methodologyVersion": "aaofi-investor-v1",
+  "ticker": "ORCL",
+  "issuer": "ORACLE CORP",
+  "cik": "0001341439",
+  "sic": "7372",
+  "classification": "OPERATING_COMPANY",
+  "exchange": "NYSE",
+  "publishedAt": "2026-09-08T00:33:02.379Z",
+  "sources": {
+    "submissions": {
+      "url": "https://data.sec.gov/submissions/CIK0001341439.json",
+      "retrievedAt": "2026-09-08T00:33:02.467Z",
+      "bytes": 158561,
+      "sha256": "c431ef8d2d24e1fdb729f77094bb9ccfde65ed89458237e10f18236ddb55ee89",
+      "latencyMs": 89
+    },
+    "companyFacts": {
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001341439.json",
+      "retrievedAt": "2026-09-08T00:33:02.694Z",
+      "bytes": 3914974,
+      "sha256": "60e4f8db39c9a84106bd02677f578db14a54c8bccabcdba2b828e595c32edeca",
+      "latencyMs": 172
+    }
+  },
+  "filings": [
+    {
+      "form": "10-K",
+      "filingDate": "2026-06-22",
+      "reportDate": "2026-05-31",
+      "accession": "0001193125-26-277521",
+      "primaryDocument": "orcl-20260531.htm",
+      "facts": {
+        "CashAndCashEquivalentsAtCarryingValue": 31289000000,
+        "AvailableForSaleSecuritiesDebtSecuritiesCurrent": 605000000,
+        "MarketableSecuritiesCurrent": null,
+        "AccountsReceivableNetCurrent": 10385000000,
+        "AccountsNotesAndLoansReceivableNetCurrent": null,
+        "InventoryNet": null,
+        "OperatingLeaseLiabilityCurrent": 3542000000,
+        "LesseeOperatingLeaseLiabilityPaymentsDueNextTwelveMonths": 3712000000,
+        "LongTermDebtCurrent": null,
+        "NotesPayableCurrent": 7199000000,
+        "ShortTermBorrowings": null,
+        "CommercialPaper": null,
+        "AccruedSalariesCurrentAndNoncurrent": null,
+        "EmployeeRelatedLiabilitiesCurrent": 2225000000,
+        "TaxesPayableCurrent": null,
+        "AccountsPayableAndOtherAccruedLiabilitiesCurrent": null,
+        "AccountsPayableCurrent": 10977000000,
+        "LiabilitiesCurrent": 41764000000,
+        "OtherLiabilitiesCurrent": 11447000000,
+        "ContractWithCustomerLiabilityCurrent": 9916000000,
+        "DeferredRevenueCurrent": null
+      },
+      "factSources": {
+        "CashAndCashEquivalentsAtCarryingValue": "COMPANY_FACTS",
+        "AvailableForSaleSecuritiesDebtSecuritiesCurrent": "COMPANY_FACTS",
+        "AccountsReceivableNetCurrent": "COMPANY_FACTS",
+        "OperatingLeaseLiabilityCurrent": "COMPANY_FACTS",
+        "LesseeOperatingLeaseLiabilityPaymentsDueNextTwelveMonths": "COMPANY_FACTS",
+        "NotesPayableCurrent": "COMPANY_FACTS",
+        "EmployeeRelatedLiabilitiesCurrent": "COMPANY_FACTS",
+        "AccountsPayableCurrent": "COMPANY_FACTS",
+        "LiabilitiesCurrent": "COMPANY_FACTS",
+        "OtherLiabilitiesCurrent": "COMPANY_FACTS",
+        "ContractWithCustomerLiabilityCurrent": "COMPANY_FACTS"
+      },
+      "liabilityReconciliation": {
+        "control": 41764000000,
+        "classified": 41764000000,
+        "delta": 0,
+        "items": [
+          {
+            "tag": "AccountsPayableCurrent",
+            "amount": 10977000000,
+            "treatment": "DEDUCTED",
+            "label": "Trade accounts payable"
+          },
+          {
+            "tag": "EmployeeRelatedLiabilitiesCurrent",
+            "amount": 2225000000,
+            "treatment": "DEDUCTED",
+            "label": "Accrued employee compensation"
+          },
+          {
+            "tag": "NotesPayableCurrent",
+            "amount": 7199000000,
+            "treatment": "DEDUCTED",
+            "label": "Current debt obligation"
+          },
+          {
+            "tag": "ContractWithCustomerLiabilityCurrent",
+            "amount": 9916000000,
+            "treatment": "EXCLUDED",
+            "label": "Deferred or unearned revenue"
+          },
+          {
+            "tag": "OtherLiabilitiesCurrent",
+            "amount": 11447000000,
+            "treatment": "UNRESOLVED",
+            "label": "Other current liabilities excluding mapped subcomponents"
+          }
+        ],
+        "status": "PASS"
+      },
+      "filingSource": {
+        "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+        "retrievedAt": "2026-09-08T00:33:02.866Z",
+        "bytes": 6873937,
+        "sha256": "6cd094af28aa16098cad795bf785be1866d69e59605aed1d6aef75a911a5766b",
+        "latencyMs": 177
+      },
+      "sharesOutstanding": {
+        "value": 2880471000,
+        "asOfDate": "2026-06-12"
+      }
+    },
+    {
+      "form": "10-Q",
+      "filingDate": "2026-03-11",
+      "reportDate": "2026-02-28",
+      "accession": "0001193125-26-101045",
+      "primaryDocument": "orcl-20260228.htm",
+      "facts": {
+        "CashAndCashEquivalentsAtCarryingValue": 38455000000,
+        "AvailableForSaleSecuritiesDebtSecuritiesCurrent": 677000000,
+        "MarketableSecuritiesCurrent": null,
+        "AccountsReceivableNetCurrent": 10719000000,
+        "AccountsNotesAndLoansReceivableNetCurrent": null,
+        "InventoryNet": null,
+        "OperatingLeaseLiabilityCurrent": 2798000000,
+        "LesseeOperatingLeaseLiabilityPaymentsDueNextTwelveMonths": 2712000000,
+        "LongTermDebtCurrent": null,
+        "NotesPayableCurrent": 9887000000,
+        "ShortTermBorrowings": null,
+        "CommercialPaper": null,
+        "AccruedSalariesCurrentAndNoncurrent": null,
+        "EmployeeRelatedLiabilitiesCurrent": 1940000000,
+        "TaxesPayableCurrent": null,
+        "AccountsPayableAndOtherAccruedLiabilitiesCurrent": null,
+        "AccountsPayableCurrent": 9474000000,
+        "LiabilitiesCurrent": 40737000000,
+        "OtherLiabilitiesCurrent": 9555000000,
+        "ContractWithCustomerLiabilityCurrent": 9881000000,
+        "DeferredRevenueCurrent": null
+      },
+      "factSources": {
+        "CashAndCashEquivalentsAtCarryingValue": "COMPANY_FACTS",
+        "AvailableForSaleSecuritiesDebtSecuritiesCurrent": "COMPANY_FACTS",
+        "AccountsReceivableNetCurrent": "COMPANY_FACTS",
+        "OperatingLeaseLiabilityCurrent": "COMPANY_FACTS",
+        "LesseeOperatingLeaseLiabilityPaymentsDueNextTwelveMonths": "COMPANY_FACTS",
+        "NotesPayableCurrent": "COMPANY_FACTS",
+        "EmployeeRelatedLiabilitiesCurrent": "COMPANY_FACTS",
+        "AccountsPayableCurrent": "COMPANY_FACTS",
+        "LiabilitiesCurrent": "COMPANY_FACTS",
+        "OtherLiabilitiesCurrent": "COMPANY_FACTS",
+        "ContractWithCustomerLiabilityCurrent": "COMPANY_FACTS"
+      },
+      "liabilityReconciliation": {
+        "control": 40737000000,
+        "classified": 40737000000,
+        "delta": 0,
+        "items": [
+          {
+            "tag": "AccountsPayableCurrent",
+            "amount": 9474000000,
+            "treatment": "DEDUCTED",
+            "label": "Trade accounts payable"
+          },
+          {
+            "tag": "EmployeeRelatedLiabilitiesCurrent",
+            "amount": 1940000000,
+            "treatment": "DEDUCTED",
+            "label": "Accrued employee compensation"
+          },
+          {
+            "tag": "NotesPayableCurrent",
+            "amount": 9887000000,
+            "treatment": "DEDUCTED",
+            "label": "Current debt obligation"
+          },
+          {
+            "tag": "ContractWithCustomerLiabilityCurrent",
+            "amount": 9881000000,
+            "treatment": "EXCLUDED",
+            "label": "Deferred or unearned revenue"
+          },
+          {
+            "tag": "OtherLiabilitiesCurrent",
+            "amount": 9555000000,
+            "treatment": "UNRESOLVED",
+            "label": "Other current liabilities excluding mapped subcomponents"
+          }
+        ],
+        "status": "PASS"
+      },
+      "filingSource": {
+        "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526101045/orcl-20260228.htm",
+        "retrievedAt": "2026-09-08T00:33:03.033Z",
+        "bytes": 4172832,
+        "sha256": "e7c7cc92bc79c63d11a6392e76432cf836467d1cb5c2f8e07743d05b6c5675d2",
+        "latencyMs": 158
+      },
+      "sharesOutstanding": {
+        "value": 2876046000,
+        "asOfDate": "2026-03-05"
+      }
+    },
+    {
+      "form": "10-Q",
+      "filingDate": "2025-12-11",
+      "reportDate": "2025-11-30",
+      "accession": "0001193125-25-315925",
+      "primaryDocument": "orcl-20251130.htm",
+      "facts": {
+        "CashAndCashEquivalentsAtCarryingValue": 19241000000,
+        "AvailableForSaleSecuritiesDebtSecuritiesCurrent": 525000000,
+        "MarketableSecuritiesCurrent": null,
+        "AccountsReceivableNetCurrent": 9440000000,
+        "AccountsNotesAndLoansReceivableNetCurrent": null,
+        "InventoryNet": null,
+        "OperatingLeaseLiabilityCurrent": 2368000000,
+        "LesseeOperatingLeaseLiabilityPaymentsDueNextTwelveMonths": null,
+        "LongTermDebtCurrent": null,
+        "NotesPayableCurrent": 8091000000,
+        "ShortTermBorrowings": null,
+        "CommercialPaper": null,
+        "AccruedSalariesCurrentAndNoncurrent": null,
+        "EmployeeRelatedLiabilitiesCurrent": 1947000000,
+        "TaxesPayableCurrent": null,
+        "AccountsPayableAndOtherAccruedLiabilitiesCurrent": null,
+        "AccountsPayableCurrent": 10140000000,
+        "LiabilitiesCurrent": 37795000000,
+        "OtherLiabilitiesCurrent": 7677000000,
+        "ContractWithCustomerLiabilityCurrent": 9940000000,
+        "DeferredRevenueCurrent": null
+      },
+      "factSources": {
+        "CashAndCashEquivalentsAtCarryingValue": "COMPANY_FACTS",
+        "AvailableForSaleSecuritiesDebtSecuritiesCurrent": "COMPANY_FACTS",
+        "AccountsReceivableNetCurrent": "COMPANY_FACTS",
+        "OperatingLeaseLiabilityCurrent": "COMPANY_FACTS",
+        "NotesPayableCurrent": "COMPANY_FACTS",
+        "EmployeeRelatedLiabilitiesCurrent": "COMPANY_FACTS",
+        "AccountsPayableCurrent": "COMPANY_FACTS",
+        "LiabilitiesCurrent": "COMPANY_FACTS",
+        "OtherLiabilitiesCurrent": "COMPANY_FACTS",
+        "ContractWithCustomerLiabilityCurrent": "COMPANY_FACTS"
+      },
+      "liabilityReconciliation": {
+        "control": 37795000000,
+        "classified": 37795000000,
+        "delta": 0,
+        "items": [
+          {
+            "tag": "AccountsPayableCurrent",
+            "amount": 10140000000,
+            "treatment": "DEDUCTED",
+            "label": "Trade accounts payable"
+          },
+          {
+            "tag": "EmployeeRelatedLiabilitiesCurrent",
+            "amount": 1947000000,
+            "treatment": "DEDUCTED",
+            "label": "Accrued employee compensation"
+          },
+          {
+            "tag": "NotesPayableCurrent",
+            "amount": 8091000000,
+            "treatment": "DEDUCTED",
+            "label": "Current debt obligation"
+          },
+          {
+            "tag": "ContractWithCustomerLiabilityCurrent",
+            "amount": 9940000000,
+            "treatment": "EXCLUDED",
+            "label": "Deferred or unearned revenue"
+          },
+          {
+            "tag": "OtherLiabilitiesCurrent",
+            "amount": 7677000000,
+            "treatment": "UNRESOLVED",
+            "label": "Other current liabilities excluding mapped subcomponents"
+          }
+        ],
+        "status": "PASS"
+      },
+      "filingSource": {
+        "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312525315925/orcl-20251130.htm",
+        "retrievedAt": "2026-09-08T00:33:03.184Z",
+        "bytes": 3771598,
+        "sha256": "313af69a5a7d098b0187141bc1e5b9952c7ae9a4a6dc50574f2067a8a22f31ae",
+        "latencyMs": 144
+      },
+      "sharesOutstanding": {
+        "value": 2873130000,
+        "asOfDate": "2025-12-05"
+      }
+    },
+    {
+      "form": "10-Q",
+      "filingDate": "2025-09-10",
+      "reportDate": "2025-08-31",
+      "accession": "0001193125-25-200095",
+      "primaryDocument": "orcl-20250831.htm",
+      "facts": {
+        "CashAndCashEquivalentsAtCarryingValue": 10445000000,
+        "AvailableForSaleSecuritiesDebtSecuritiesCurrent": 560000000,
+        "MarketableSecuritiesCurrent": null,
+        "AccountsReceivableNetCurrent": 8843000000,
+        "AccountsNotesAndLoansReceivableNetCurrent": null,
+        "InventoryNet": null,
+        "OperatingLeaseLiabilityCurrent": 2196000000,
+        "LesseeOperatingLeaseLiabilityPaymentsDueNextTwelveMonths": null,
+        "LongTermDebtCurrent": null,
+        "NotesPayableCurrent": 9079000000,
+        "ShortTermBorrowings": null,
+        "CommercialPaper": null,
+        "AccruedSalariesCurrentAndNoncurrent": null,
+        "EmployeeRelatedLiabilitiesCurrent": 1794000000,
+        "TaxesPayableCurrent": null,
+        "AccountsPayableAndOtherAccruedLiabilitiesCurrent": null,
+        "AccountsPayableCurrent": 8203000000,
+        "LiabilitiesCurrent": 39874000000,
+        "OtherLiabilitiesCurrent": 8700000000,
+        "ContractWithCustomerLiabilityCurrent": 12098000000,
+        "DeferredRevenueCurrent": null
+      },
+      "factSources": {
+        "CashAndCashEquivalentsAtCarryingValue": "COMPANY_FACTS",
+        "AvailableForSaleSecuritiesDebtSecuritiesCurrent": "COMPANY_FACTS",
+        "AccountsReceivableNetCurrent": "COMPANY_FACTS",
+        "OperatingLeaseLiabilityCurrent": "COMPANY_FACTS",
+        "NotesPayableCurrent": "COMPANY_FACTS",
+        "EmployeeRelatedLiabilitiesCurrent": "COMPANY_FACTS",
+        "AccountsPayableCurrent": "COMPANY_FACTS",
+        "LiabilitiesCurrent": "COMPANY_FACTS",
+        "OtherLiabilitiesCurrent": "COMPANY_FACTS",
+        "ContractWithCustomerLiabilityCurrent": "COMPANY_FACTS"
+      },
+      "liabilityReconciliation": {
+        "control": 39874000000,
+        "classified": 39874000000,
+        "delta": 0,
+        "items": [
+          {
+            "tag": "AccountsPayableCurrent",
+            "amount": 8203000000,
+            "treatment": "DEDUCTED",
+            "label": "Trade accounts payable"
+          },
+          {
+            "tag": "EmployeeRelatedLiabilitiesCurrent",
+            "amount": 1794000000,
+            "treatment": "DEDUCTED",
+            "label": "Accrued employee compensation"
+          },
+          {
+            "tag": "NotesPayableCurrent",
+            "amount": 9079000000,
+            "treatment": "DEDUCTED",
+            "label": "Current debt obligation"
+          },
+          {
+            "tag": "ContractWithCustomerLiabilityCurrent",
+            "amount": 12098000000,
+            "treatment": "EXCLUDED",
+            "label": "Deferred or unearned revenue"
+          },
+          {
+            "tag": "OtherLiabilitiesCurrent",
+            "amount": 8700000000,
+            "treatment": "UNRESOLVED",
+            "label": "Other current liabilities excluding mapped subcomponents"
+          }
+        ],
+        "status": "PASS"
+      },
+      "filingSource": {
+        "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312525200095/orcl-20250831.htm",
+        "retrievedAt": "2026-09-08T00:33:03.338Z",
+        "bytes": 2625821,
+        "sha256": "97f1bf7e5033da42c30a7c824cede973ff092bd6dca9702df8371373760835bd",
+        "latencyMs": 147
+      },
+      "sharesOutstanding": {
+        "value": 2841714000,
+        "asOfDate": "2025-09-05"
+      }
+    }
+  ]
+}

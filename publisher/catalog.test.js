@@ -2,7 +2,8 @@
 
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const {artifactEntry, buildArtifact, isSupportedSic, selectBatch, uniqueUniverse} = require('./lib/catalog');
+const {artifactEntry, buildArtifact, extractInlineFacts, isSupportedSic, liabilityReconciliation,
+  selectBatch, uniqueUniverse} = require('./lib/catalog');
 
 function source(url) {
   return {url, retrievedAt: '2026-09-07T00:00:00.000Z', bytes: 100, sha256: 'a'.repeat(64)};
@@ -51,4 +52,33 @@ test('classifies financial, fund, and REIT SICs as unsupported', () => {
   assert.equal(isSupportedSic('3571'), true);
   assert.equal(isSupportedSic('6021'), false);
   assert.equal(isSupportedSic('6798'), false);
+});
+
+test('extracts issuer filing-table facts from dimensionless instant contexts', () => {
+  const html = '<xbrli:context id="current"><xbrli:period><xbrli:instant>2026-03-28</xbrli:instant>' +
+    '</xbrli:period></xbrli:context><ix:nonfraction name="us-gaap:OtherLiabilitiesCurrent" ' +
+    'contextRef="current" scale="6">57,654</ix:nonfraction>';
+  assert.equal(extractInlineFacts(html, {reportDate: '2026-03-28'}).OtherLiabilitiesCurrent,
+    57654000000);
+});
+
+test('reconciles AAPL current liabilities while leaving other liabilities unresolved', () => {
+  const result = liabilityReconciliation({LiabilitiesCurrent: 134641000000,
+    AccountsPayableCurrent: 57349000000, OtherLiabilitiesCurrent: 57654000000,
+    ContractWithCustomerLiabilityCurrent: 9331000000, CommercialPaper: 1997000000,
+    LongTermDebtCurrent: 8310000000});
+  assert.equal(result.status, 'PASS');
+  assert.equal(result.delta, 0);
+  assert.equal(result.items.find(item => item.tag === 'OtherLiabilitiesCurrent').treatment, 'UNRESOLVED');
+});
+
+test('reconciles ORCL issuer-specific current-liability tags', () => {
+  const result = liabilityReconciliation({LiabilitiesCurrent: 40737000000,
+    NotesPayableCurrent: 9887000000, AccountsPayableCurrent: 9474000000,
+    EmployeeRelatedLiabilitiesCurrent: 1940000000, ContractWithCustomerLiabilityCurrent: 9881000000,
+    OtherLiabilitiesCurrent: 9555000000}, '0001341439');
+  assert.equal(result.status, 'PASS');
+  assert.equal(result.delta, 0);
+  assert.equal(result.items.find(item => item.tag === 'OtherLiabilitiesCurrent').amount, 9555000000);
+  assert.equal(result.items.some(item => item.tag === 'OperatingLeaseLiabilityCurrent'), false);
 });

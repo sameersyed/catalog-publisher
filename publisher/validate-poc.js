@@ -32,6 +32,23 @@ for (const [ticker, entry] of Object.entries(index.issuers)) {
         !/^\d{10}-\d{2}-\d{6}$/.test(filing.accession) || !filing.facts) {
       throw new Error(`${ticker} has invalid filing metadata.`);
     }
+    const expectedFilingUrl = `https://www.sec.gov/Archives/edgar/data/${Number(entry.cik)}/` +
+      `${filing.accession.replace(/-/g, '')}/${filing.primaryDocument}`;
+    if (!filing.filingSource || filing.filingSource.url !== expectedFilingUrl ||
+        !/^\d{4}-\d{2}-\d{2}T/.test(filing.filingSource.retrievedAt) ||
+        !Number.isFinite(Number(filing.filingSource.bytes)) || Number(filing.filingSource.bytes) <= 0 ||
+        !/^[a-f0-9]{64}$/.test(filing.filingSource.sha256)) {
+      throw new Error(`${ticker} has invalid filing-source provenance.`);
+    }
+    const reconciliation = filing.liabilityReconciliation;
+    if (reconciliation && (!['PASS', 'INCOMPLETE'].includes(reconciliation.status) ||
+        !Number.isFinite(Number(reconciliation.control)) ||
+        !Number.isFinite(Number(reconciliation.classified)) ||
+        !Number.isFinite(Number(reconciliation.delta)) || !Array.isArray(reconciliation.items) ||
+        Math.abs(Number(reconciliation.control) - Number(reconciliation.classified) -
+          Number(reconciliation.delta)) > 1)) {
+      throw new Error(`${ticker} has invalid liability reconciliation.`);
+    }
   }
   seenCiks.add(entry.cik);
 }
