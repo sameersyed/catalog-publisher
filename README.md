@@ -1,5 +1,18 @@
 # Stock Evidence Catalog Publisher POC
 
+The workbook and private queue sources live in the separate
+[`sameersyed/zakat-calculator`](https://github.com/sameersyed/zakat-calculator) repository. This
+repository owns the home-VM publisher and its generated public SEC catalog.
+
+For immediate processing on the VM, log in as `stock-evidence` and run:
+
+```bash
+run-stock-evidence
+```
+
+The canonical command source is `publisher/run-stock-evidence`; the VM exposes it through
+`~/bin/run-stock-evidence`. See `publisher/README.md` for scheduling, secrets, logs, and recovery.
+
 Dependency-free Node.js 16 proof of concept for Rocky Linux 9.
 
 It publishes compact, point-in-time SEC filing evidence for consumption by the Zakat Calculator. This
