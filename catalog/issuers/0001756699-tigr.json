@@ -1,0 +1,296 @@
+{
+  "schemaVersion": 1,
+  "methodologyVersion": "aaofi-investor-v2",
+  "ticker": "TIGR",
+  "issuer": "UP Fintech Holding Ltd",
+  "cik": "0001756699",
+  "sic": "6211",
+  "classification": "FOREIGN_PRIVATE_ISSUER",
+  "exchange": "Nasdaq",
+  "publishedAt": "2026-09-13T07:12:19.836Z",
+  "sources": {
+    "submissions": {
+      "url": "https://data.sec.gov/submissions/CIK0001756699.json",
+      "retrievedAt": "2026-09-13T07:12:20.033Z",
+      "bytes": 26015,
+      "sha256": "a1863bd619b334dcb08c8aecadd5bf69cf09071b1b2b400d4333d495137f4311",
+      "latencyMs": 197
+    },
+    "companyFacts": {
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001756699.json",
+      "retrievedAt": "2026-09-13T07:12:20.245Z",
+      "bytes": 529289,
+      "sha256": "ab082572d3a56919195388227bee3de7b1a1b5e104fdf38dc36d77c52a4ef068",
+      "latencyMs": 256
+    }
+  },
+  "filings": [
+    {
+      "form": "20-F",
+      "filingDate": "2026-04-24",
+      "reportDate": "2025-12-31",
+      "accession": "0001193125-26-174855",
+      "primaryDocument": "tigr-20251231.htm",
+      "facts": {
+        "CashAndCashEquivalentsAtCarryingValue": 791016893,
+        "AvailableForSaleSecuritiesDebtSecuritiesCurrent": null,
+        "MarketableSecuritiesCurrent": null,
+        "AccountsReceivableNetCurrent": null,
+        "AccountsNotesAndLoansReceivableNetCurrent": null,
+        "InventoryNet": null,
+        "OperatingLeaseLiabilityCurrent": 6777918,
+        "LesseeOperatingLeaseLiabilityPaymentsDueNextTwelveMonths": 7092390,
+        "LongTermDebtCurrent": null,
+        "NotesPayableCurrent": null,
+        "ShortTermBorrowings": null,
+        "CommercialPaper": null,
+        "AccruedSalariesCurrentAndNoncurrent": null,
+        "EmployeeRelatedLiabilitiesCurrent": 44151796,
+        "TaxesPayableCurrent": null,
+        "AccountsPayableAndOtherAccruedLiabilitiesCurrent": null,
+        "AccountsPayableCurrent": null,
+        "LiabilitiesCurrent": 7299458972,
+        "OtherLiabilitiesCurrent": null,
+        "ContractWithCustomerLiabilityCurrent": null,
+        "DeferredRevenueCurrent": null
+      },
+      "factSources": {
+        "CashAndCashEquivalentsAtCarryingValue": "COMPANY_FACTS",
+        "OperatingLeaseLiabilityCurrent": "COMPANY_FACTS",
+        "LesseeOperatingLeaseLiabilityPaymentsDueNextTwelveMonths": "COMPANY_FACTS",
+        "EmployeeRelatedLiabilitiesCurrent": "COMPANY_FACTS",
+        "LiabilitiesCurrent": "COMPANY_FACTS"
+      },
+      "liabilityReconciliation": {
+        "control": 7299458972,
+        "classified": 50929714,
+        "delta": 7248529258,
+        "items": [
+          {
+            "tag": "EmployeeRelatedLiabilitiesCurrent",
+            "amount": 44151796,
+            "treatment": "DEDUCTED",
+            "label": "Accrued employee compensation"
+          },
+          {
+            "tag": "OperatingLeaseLiabilityCurrent",
+            "amount": 6777918,
+            "treatment": "DEDUCTED",
+            "label": "Current operating lease obligation"
+          }
+        ],
+        "status": "INCOMPLETE"
+      },
+      "filingSource": {
+        "url": "https://www.sec.gov/Archives/edgar/data/1756699/000119312526174855/tigr-20251231.htm",
+        "retrievedAt": "2026-09-13T07:12:20.434Z",
+        "bytes": 6624803,
+        "sha256": "fae9b48046d562cca7eb276ee04d9ff804eefdb0a0cdcf49ea6760130ccc1e13",
+        "latencyMs": 201
+      },
+      "sharesOutstanding": null
+    },
+    {
+      "form": "20-F",
+      "filingDate": "2025-04-23",
+      "reportDate": "2024-12-31",
+      "accession": "0000950170-25-056953",
+      "primaryDocument": "tigr-20241231.htm",
+      "facts": {
+        "CashAndCashEquivalentsAtCarryingValue": 393576874,
+        "AvailableForSaleSecuritiesDebtSecuritiesCurrent": null,
+        "MarketableSecuritiesCurrent": null,
+        "AccountsReceivableNetCurrent": null,
+        "AccountsNotesAndLoansReceivableNetCurrent": null,
+        "InventoryNet": null,
+        "OperatingLeaseLiabilityCurrent": 4153928,
+        "LesseeOperatingLeaseLiabilityPaymentsDueNextTwelveMonths": 4576442,
+        "LongTermDebtCurrent": null,
+        "NotesPayableCurrent": null,
+        "ShortTermBorrowings": null,
+        "CommercialPaper": null,
+        "AccruedSalariesCurrentAndNoncurrent": null,
+        "EmployeeRelatedLiabilitiesCurrent": 26219450,
+        "TaxesPayableCurrent": null,
+        "AccountsPayableAndOtherAccruedLiabilitiesCurrent": null,
+        "AccountsPayableCurrent": null,
+        "LiabilitiesCurrent": 5561712339,
+        "OtherLiabilitiesCurrent": null,
+        "ContractWithCustomerLiabilityCurrent": null,
+        "DeferredRevenueCurrent": null
+      },
+      "factSources": {
+        "CashAndCashEquivalentsAtCarryingValue": "COMPANY_FACTS",
+        "OperatingLeaseLiabilityCurrent": "COMPANY_FACTS",
+        "LesseeOperatingLeaseLiabilityPaymentsDueNextTwelveMonths": "COMPANY_FACTS",
+        "EmployeeRelatedLiabilitiesCurrent": "COMPANY_FACTS",
+        "LiabilitiesCurrent": "COMPANY_FACTS"
+      },
+      "liabilityReconciliation": {
+        "control": 5561712339,
+        "classified": 30373378,
+        "delta": 5531338961,
+        "items": [
+          {
+            "tag": "EmployeeRelatedLiabilitiesCurrent",
+            "amount": 26219450,
+            "treatment": "DEDUCTED",
+            "label": "Accrued employee compensation"
+          },
+          {
+            "tag": "OperatingLeaseLiabilityCurrent",
+            "amount": 4153928,
+            "treatment": "DEDUCTED",
+            "label": "Current operating lease obligation"
+          }
+        ],
+        "status": "INCOMPLETE"
+      },
+      "filingSource": {
+        "url": "https://www.sec.gov/Archives/edgar/data/1756699/000095017025056953/tigr-20241231.htm",
+        "retrievedAt": "2026-09-13T07:12:20.624Z",
+        "bytes": 6232337,
+        "sha256": "6bae5c8fb2d6c18281a0e07292dd9ae5920e205ab533f02579e0318488860c7d",
+        "latencyMs": 185
+      },
+      "sharesOutstanding": null
+    },
+    {
+      "form": "20-F",
+      "filingDate": "2024-04-22",
+      "reportDate": "2023-12-31",
+      "accession": "0000950170-24-046209",
+      "primaryDocument": "tigr-20231231.htm",
+      "facts": {
+        "CashAndCashEquivalentsAtCarryingValue": 322599616,
+        "AvailableForSaleSecuritiesDebtSecuritiesCurrent": null,
+        "MarketableSecuritiesCurrent": null,
+        "AccountsReceivableNetCurrent": null,
+        "AccountsNotesAndLoansReceivableNetCurrent": null,
+        "InventoryNet": null,
+        "OperatingLeaseLiabilityCurrent": 4133883,
+        "LesseeOperatingLeaseLiabilityPaymentsDueNextTwelveMonths": 4435309,
+        "LongTermDebtCurrent": null,
+        "NotesPayableCurrent": null,
+        "ShortTermBorrowings": null,
+        "CommercialPaper": null,
+        "AccruedSalariesCurrentAndNoncurrent": null,
+        "EmployeeRelatedLiabilitiesCurrent": 19043496,
+        "TaxesPayableCurrent": null,
+        "AccountsPayableAndOtherAccruedLiabilitiesCurrent": null,
+        "AccountsPayableCurrent": null,
+        "LiabilitiesCurrent": 3085562269,
+        "OtherLiabilitiesCurrent": null,
+        "ContractWithCustomerLiabilityCurrent": null,
+        "DeferredRevenueCurrent": null
+      },
+      "factSources": {
+        "CashAndCashEquivalentsAtCarryingValue": "COMPANY_FACTS",
+        "OperatingLeaseLiabilityCurrent": "COMPANY_FACTS",
+        "LesseeOperatingLeaseLiabilityPaymentsDueNextTwelveMonths": "COMPANY_FACTS",
+        "EmployeeRelatedLiabilitiesCurrent": "COMPANY_FACTS",
+        "LiabilitiesCurrent": "COMPANY_FACTS"
+      },
+      "liabilityReconciliation": {
+        "control": 3085562269,
+        "classified": 23177379,
+        "delta": 3062384890,
+        "items": [
+          {
+            "tag": "EmployeeRelatedLiabilitiesCurrent",
+            "amount": 19043496,
+            "treatment": "DEDUCTED",
+            "label": "Accrued employee compensation"
+          },
+          {
+            "tag": "OperatingLeaseLiabilityCurrent",
+            "amount": 4133883,
+            "treatment": "DEDUCTED",
+            "label": "Current operating lease obligation"
+          }
+        ],
+        "status": "INCOMPLETE"
+      },
+      "filingSource": {
+        "url": "https://www.sec.gov/Archives/edgar/data/1756699/000095017024046209/tigr-20231231.htm",
+        "retrievedAt": "2026-09-13T07:12:20.825Z",
+        "bytes": 5353461,
+        "sha256": "4fbe329b8e73f58538838b379c20aa9424c806cfda97c550a5b4a2397806b603",
+        "latencyMs": 187
+      },
+      "sharesOutstanding": null
+    },
+    {
+      "form": "20-F",
+      "filingDate": "2023-04-26",
+      "reportDate": "2022-12-31",
+      "accession": "0000950170-23-014775",
+      "primaryDocument": "tigr-20221231.htm",
+      "facts": {
+        "CashAndCashEquivalentsAtCarryingValue": 277660847,
+        "AvailableForSaleSecuritiesDebtSecuritiesCurrent": null,
+        "MarketableSecuritiesCurrent": null,
+        "AccountsReceivableNetCurrent": null,
+        "AccountsNotesAndLoansReceivableNetCurrent": null,
+        "InventoryNet": null,
+        "OperatingLeaseLiabilityCurrent": 5490079,
+        "LesseeOperatingLeaseLiabilityPaymentsDueNextTwelveMonths": 6065338,
+        "LongTermDebtCurrent": null,
+        "NotesPayableCurrent": null,
+        "ShortTermBorrowings": null,
+        "CommercialPaper": null,
+        "AccruedSalariesCurrentAndNoncurrent": null,
+        "EmployeeRelatedLiabilitiesCurrent": 15761463,
+        "TaxesPayableCurrent": null,
+        "AccountsPayableAndOtherAccruedLiabilitiesCurrent": null,
+        "AccountsPayableCurrent": null,
+        "LiabilitiesCurrent": 3180556023,
+        "OtherLiabilitiesCurrent": 1259754,
+        "ContractWithCustomerLiabilityCurrent": null,
+        "DeferredRevenueCurrent": null
+      },
+      "factSources": {
+        "CashAndCashEquivalentsAtCarryingValue": "COMPANY_FACTS",
+        "OperatingLeaseLiabilityCurrent": "COMPANY_FACTS",
+        "LesseeOperatingLeaseLiabilityPaymentsDueNextTwelveMonths": "COMPANY_FACTS",
+        "EmployeeRelatedLiabilitiesCurrent": "COMPANY_FACTS",
+        "LiabilitiesCurrent": "COMPANY_FACTS",
+        "OtherLiabilitiesCurrent": "COMPANY_FACTS"
+      },
+      "liabilityReconciliation": {
+        "control": 3180556023,
+        "classified": 22511296,
+        "delta": 3158044727,
+        "items": [
+          {
+            "tag": "EmployeeRelatedLiabilitiesCurrent",
+            "amount": 15761463,
+            "treatment": "DEDUCTED",
+            "label": "Accrued employee compensation"
+          },
+          {
+            "tag": "OperatingLeaseLiabilityCurrent",
+            "amount": 5490079,
+            "treatment": "DEDUCTED",
+            "label": "Current operating lease obligation"
+          },
+          {
+            "tag": "OtherLiabilitiesCurrent",
+            "amount": 1259754,
+            "treatment": "UNRESOLVED",
+            "label": "Other current liabilities excluding mapped subcomponents"
+          }
+        ],
+        "status": "INCOMPLETE"
+      },
+      "filingSource": {
+        "url": "https://www.sec.gov/Archives/edgar/data/1756699/000095017023014775/tigr-20221231.htm",
+        "retrievedAt": "2026-09-13T07:12:21.023Z",
+        "bytes": 8006196,
+        "sha256": "2b24b41d241f0ee871fe8b0ed64d0547ce91a2aa59bdad12d7803c811d1ba786",
+        "latencyMs": 201
+      },
+      "sharesOutstanding": null
+    }
+  ]
+}
