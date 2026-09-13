@@ -28,7 +28,7 @@ trap 'exit 129' HUP
 trap 'exit 130' INT
 trap 'exit 143' TERM
 
-if [ -n "$(git -C "$ROOT" status --porcelain -- catalog)" ]; then
+if [ "$#" -eq 0 ] && [ -n "$(git -C "$ROOT" status --porcelain -- catalog)" ]; then
   printf '%s\n' 'Catalog has uncommitted changes; refusing to publish over them.' >&2
   exit 1
 fi

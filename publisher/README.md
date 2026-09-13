@@ -42,7 +42,8 @@ If a terminal queue request must be retried after a validator, commit, or push d
 queue source that supports authenticated retry, then run
 `run-stock-evidence <terminal-request-uuid>`. This loads the protected publisher environment and appends
 a new `PENDING` audit row rather than editing history. Run `run-stock-evidence` again without an argument
-to process it.
+to process it. Administrative retry does not modify the catalog and can run while failed generated files
+are being preserved; normal processing remains blocked until the catalog worktree is clean.
 
 Install `stock-evidence-catalog.service` and `.timer` under `~/.config/systemd/user/`, and store the
 contact header in mode-600 `~/.config/stock-evidence/catalog.env`:
