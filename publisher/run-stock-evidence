@@ -1,0 +1,35 @@
+#!/bin/sh
+set -eu
+
+ENV_FILE=${STOCK_EVIDENCE_ENV:-"$HOME/.config/stock-evidence/catalog.env"}
+RUNNER=${CATALOG_RUNNER:-"$HOME/catalog-publisher/publisher/run-catalog-publisher.sh"}
+STATE_HOME=${XDG_STATE_HOME:-"$HOME/.local/state"}
+LOG="$STATE_HOME/stock-evidence-catalog/publisher.log"
+
+if [ "$(id -un)" != 'stock-evidence' ]; then
+  printf '%s\n' 'Run this command as the stock-evidence user.' >&2
+  exit 1
+fi
+if [ ! -r "$ENV_FILE" ]; then
+  printf '%s\n' "Publisher environment is not readable: $ENV_FILE" >&2
+  exit 1
+fi
+if [ ! -x "$RUNNER" ]; then
+  printf '%s\n' "Publisher runner is not executable: $RUNNER" >&2
+  exit 1
+fi
+
+set -a
+. "$ENV_FILE"
+set +a
+
+if "$RUNNER"; then
+  status=0
+else
+  status=$?
+fi
+if [ -r "$LOG" ]; then
+  printf '%s\n' 'Latest publisher output:'
+  tail -n 80 "$LOG"
+fi
+exit "$status"

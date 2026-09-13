@@ -24,7 +24,19 @@ Treat validator failure as a hard stop.
 `run-catalog-publisher.sh` is the scheduled entry point. It prevents overlapping runs, refuses to
 touch a dirty catalog, claims up to 250 private queue requests, publishes only their unique tickers,
 validates the catalog, and commits/pushes only validated catalog changes. Configure secrets outside
-Git. Logs must be monitored for `PARTIAL`, validator failures, and push failures.
+Git. It appends mode-600 output to `~/.local/state/stock-evidence-catalog/publisher.log` so the
+unprivileged account does not depend on journal access.
+
+For an immediate manual run, install `run-stock-evidence` in `~/bin` and run it directly as the
+`stock-evidence` user:
+
+```bash
+run-stock-evidence
+```
+
+The command loads the same mode-600 environment as systemd, invokes the scheduled entry point, and
+prints the latest publisher log. Queue claims are leases; an interrupted run becomes claimable again
+after the queue's lease timeout.
 
 Install `stock-evidence-catalog.service` and `.timer` under `~/.config/systemd/user/`, and store the
 contact header in mode-600 `~/.config/stock-evidence/catalog.env`:
