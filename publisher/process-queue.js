@@ -15,9 +15,13 @@ const RUN_STATE = path.join(STATE_HOME, 'stock-evidence-catalog', 'state.json');
 const GIT_NAME = process.env.PUBLISHER_GIT_NAME || 'Stock Evidence Publisher';
 const GIT_EMAIL = process.env.PUBLISHER_GIT_EMAIL;
 
-if (!QUEUE_URL) throw new Error('QUEUE_URL is required.');
-if (!GIT_EMAIL || !/^\S+@\S+\.\S+$/.test(GIT_EMAIL)) throw new Error('PUBLISHER_GIT_EMAIL is required.');
-const adminToken = fs.readFileSync(ADMIN_TOKEN_FILE, 'utf8').trim();
+let adminToken = '';
+
+function loadConfiguration_() {
+  if (!QUEUE_URL) throw new Error('QUEUE_URL is required.');
+  if (!GIT_EMAIL || !/^\S+@\S+\.\S+$/.test(GIT_EMAIL)) throw new Error('PUBLISHER_GIT_EMAIL is required.');
+  adminToken = fs.readFileSync(ADMIN_TOKEN_FILE, 'utf8').trim();
+}
 
 function run(command, args, options) {
   childProcess.execFileSync(command, args, {stdio: 'inherit', ...options});
@@ -53,7 +57,24 @@ function parseResponse_(response, chunks, resolve, reject) {
   }
 }
 
+function buildCompletionResults(claim, state, pipelineError) {
+  const succeeded = new Set(pipelineError ? [] : (state.succeeded || []));
+  const errors = new Map((state.failures || []).map(item => [item.ticker, item.error]));
+  return claim.requests.map(item => ({
+    requestId: item.requestId,
+    status: succeeded.has(item.ticker) ? 'COMPLETE' : 'FAILED',
+    error: succeeded.has(item.ticker) ? '' : String(pipelineError || errors.get(item.ticker) ||
+      'Publisher did not produce validated evidence.').slice(0, 500)
+  }));
+}
+
 async function main() {
+  const retryIds = process.argv.slice(2);
+  if (retryIds.length) {
+    const retried = await get({action: 'retry', adminToken, requestIds: retryIds});
+    console.log(JSON.stringify({status: 'PASS', retried: retried.retried}, null, 2));
+    return;
+  }
   const claim = await get({action: 'claim', adminToken, limit: 250});
   if (!claim.requests.length) {
     console.log(JSON.stringify({status: 'PASS', claimed: 0}, null, 2));
@@ -61,6 +82,7 @@ async function main() {
   }
   const tickers = [...new Set(claim.requests.map(item => item.ticker))];
   let state = {succeeded: [], failures: []};
+  let pipelineError = '';
   try {
     const dirty = childProcess.execFileSync('git', ['-C', ROOT, 'status', '--porcelain', '--', 'catalog'],
       {encoding: 'utf8'}).trim();
@@ -77,20 +99,23 @@ async function main() {
       run('git', ['-C', ROOT, 'push']);
     }
   } catch (error) {
-    const message = String(error.message || error).slice(0, 500);
-    state.failures = tickers.map(ticker => ({ticker, error: message}));
+    pipelineError = String(error.message || error).slice(0, 500);
   }
-  const succeeded = new Set(state.succeeded || []);
-  const errors = new Map((state.failures || []).map(item => [item.ticker, item.error]));
-  const results = claim.requests.map(item => ({requestId: item.requestId,
-    status: succeeded.has(item.ticker) ? 'COMPLETE' : 'FAILED', error: errors.get(item.ticker) || ''}));
+  const results = buildCompletionResults(claim, state, pipelineError);
   await get({action: 'complete', adminToken, results});
+  const succeeded = new Set(results.filter(item => item.status === 'COMPLETE').map(item => item.requestId));
+  const errors = results.filter(item => item.status === 'FAILED');
   if (!succeeded.size) throw new Error('No claimed ticker was published.');
   console.log(JSON.stringify({status: errors.size ? 'PARTIAL' : 'PASS', claimed: claim.requests.length,
     published: succeeded.size, failed: errors.size}, null, 2));
 }
 
-main().catch(error => {
-  console.error(error.stack || error.message);
-  process.exitCode = 1;
-});
+if (require.main === module) {
+  loadConfiguration_();
+  main().catch(error => {
+    console.error(error.stack || error.message);
+    process.exitCode = 1;
+  });
+}
+
+module.exports = {buildCompletionResults};
