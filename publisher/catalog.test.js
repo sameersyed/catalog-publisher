@@ -55,6 +55,16 @@ test('classifies financial, fund, and REIT SICs as unsupported', () => {
   assert.equal(isSupportedSic('6798'), false);
 });
 
+test('publishes a verified foreign private issuer from a 20-F for Investor proxy review', () => {
+  const data = fixture();
+  data.submissions.json.sic = '6211';
+  data.submissions.json.filings.recent.form = ['20-F'];
+  const artifact = buildArtifact('EXM', '0000000001', data.submissions, data.facts,
+    '2026-09-07T00:00:00.000Z');
+  assert.equal(artifact.classification, 'FOREIGN_PRIVATE_ISSUER');
+  assert.equal(artifact.filings[0].form, '20-F');
+});
+
 test('extracts issuer filing-table facts from dimensionless instant contexts', () => {
   const html = '<xbrli:context id="current"><xbrli:period><xbrli:instant>2026-03-28</xbrli:instant>' +
     '</xbrli:period></xbrli:context><ix:nonfraction name="us-gaap:OtherLiabilitiesCurrent" ' +

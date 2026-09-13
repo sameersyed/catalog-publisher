@@ -2,7 +2,7 @@
 
 const crypto = require('crypto');
 
-const ALLOWED_FORMS = new Set(['10-Q', '10-K']);
+const ALLOWED_FORMS = new Set(['10-Q', '10-K', '20-F']);
 const TAGS = [
   'CashAndCashEquivalentsAtCarryingValue',
   'AvailableForSaleSecuritiesDebtSecuritiesCurrent',
@@ -54,6 +54,10 @@ function currentFilings(submissions) {
     primaryDocument: recent.primaryDocument[index]
   })).filter(item => ALLOWED_FORMS.has(item.form) && item.filingDate && item.reportDate && item.accession)
     .sort((left, right) => right.filingDate.localeCompare(left.filingDate));
+}
+
+function isForeignPrivateIssuer(filings) {
+  return filings.some(item => item.form === '20-F');
 }
 
 function selectUniqueFact(companyFacts, taxonomy, tag, unit, filing) {
@@ -187,7 +191,9 @@ function buildArtifact(ticker, cik, submissionsResponse, factsResponse, now, fil
       filingSource: filingResponses && filingResponses[index] && filingResponses[index].source,
       sharesOutstanding: selectShares(factsResponse.json, filing)};
   });
-  if (!filings.length) throw new Error(`${ticker} has no recent 10-Q or 10-K filing.`);
+  if (!filings.length) throw new Error(`${ticker} has no recent 10-Q, 10-K, or 20-F filing.`);
+  const classification = isForeignPrivateIssuer(filings) ? 'FOREIGN_PRIVATE_ISSUER' :
+    (isSupportedSic(submissions.sic) ? 'OPERATING_COMPANY' : 'UNSUPPORTED_ISSUER');
   return {
     schemaVersion: 1,
     methodologyVersion: 'aaofi-investor-v2',
@@ -195,7 +201,7 @@ function buildArtifact(ticker, cik, submissionsResponse, factsResponse, now, fil
     issuer: submissions.name,
     cik,
     sic: submissions.sic,
-    classification: isSupportedSic(submissions.sic) ? 'OPERATING_COMPANY' : 'UNSUPPORTED_ISSUER',
+    classification,
     exchange: (submissions.exchanges || [])[0] || '',
     publishedAt: now,
     sources: {submissions: submissionsResponse.source, companyFacts: factsResponse.source},
@@ -231,5 +237,5 @@ function selectBatch(universe, state, size) {
   return {items, nextCursor: offset + items.length >= universe.length ? '' : items[items.length - 1].ticker};
 }
 
-module.exports = {artifactEntry, buildArtifact, currentFilings, extractInlineFacts, isSupportedSic,
+module.exports = {artifactEntry, buildArtifact, currentFilings, extractInlineFacts, isForeignPrivateIssuer, isSupportedSic,
   liabilityReconciliation, normalizeCik, selectBatch, selectShares, selectUniqueFact, uniqueUniverse};
