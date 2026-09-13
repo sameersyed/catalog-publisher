@@ -1,0 +1,347 @@
+{
+  "schemaVersion": 1,
+  "methodologyVersion": "aaofi-investor-v2",
+  "ticker": "NFLX",
+  "issuer": "NETFLIX INC",
+  "cik": "0001065280",
+  "sic": "7841",
+  "classification": "OPERATING_COMPANY",
+  "exchange": "Nasdaq",
+  "publishedAt": "2026-09-13T00:52:53.403Z",
+  "sources": {
+    "submissions": {
+      "url": "https://data.sec.gov/submissions/CIK0001065280.json",
+      "retrievedAt": "2026-09-13T00:52:53.482Z",
+      "bytes": 159387,
+      "sha256": "e49f0092c78cc3f0aac8ea3ba06dd7ea8476b94add9f744b7781fe882be2a9d8",
+      "latencyMs": 80
+    },
+    "companyFacts": {
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001065280.json",
+      "retrievedAt": "2026-09-13T00:52:53.800Z",
+      "bytes": 3592813,
+      "sha256": "00f3449073d90dfa3aec4e384de24b70d92d897f90c67d6bca61f23e33d38634",
+      "latencyMs": 252
+    }
+  },
+  "filings": [
+    {
+      "form": "10-Q",
+      "filingDate": "2026-07-17",
+      "reportDate": "2026-06-30",
+      "accession": "0001065280-26-000212",
+      "primaryDocument": "nflx-20260630.htm",
+      "facts": {
+        "CashAndCashEquivalentsAtCarryingValue": 9099232000,
+        "AvailableForSaleSecuritiesDebtSecuritiesCurrent": null,
+        "MarketableSecuritiesCurrent": null,
+        "AccountsReceivableNetCurrent": null,
+        "AccountsNotesAndLoansReceivableNetCurrent": null,
+        "InventoryNet": null,
+        "OperatingLeaseLiabilityCurrent": 431403000,
+        "LesseeOperatingLeaseLiabilityPaymentsDueNextTwelveMonths": null,
+        "LongTermDebtCurrent": null,
+        "NotesPayableCurrent": null,
+        "ShortTermBorrowings": 2483758000,
+        "CommercialPaper": null,
+        "AccruedSalariesCurrentAndNoncurrent": null,
+        "EmployeeRelatedLiabilitiesCurrent": null,
+        "TaxesPayableCurrent": null,
+        "AccountsPayableAndOtherAccruedLiabilitiesCurrent": null,
+        "AccountsPayableCurrent": 814551000,
+        "LiabilitiesCurrent": 12134898000,
+        "OtherLiabilitiesCurrent": null,
+        "ContractWithCustomerLiabilityCurrent": 1797456000,
+        "DeferredRevenueCurrent": null
+      },
+      "factSources": {
+        "CashAndCashEquivalentsAtCarryingValue": "COMPANY_FACTS",
+        "OperatingLeaseLiabilityCurrent": "COMPANY_FACTS",
+        "ShortTermBorrowings": "COMPANY_FACTS",
+        "AccountsPayableCurrent": "COMPANY_FACTS",
+        "LiabilitiesCurrent": "COMPANY_FACTS",
+        "ContractWithCustomerLiabilityCurrent": "COMPANY_FACTS"
+      },
+      "liabilityReconciliation": {
+        "control": 12134898000,
+        "classified": 5527168000,
+        "delta": 6607730000,
+        "items": [
+          {
+            "tag": "AccountsPayableCurrent",
+            "amount": 814551000,
+            "treatment": "DEDUCTED",
+            "label": "Trade accounts payable"
+          },
+          {
+            "tag": "OperatingLeaseLiabilityCurrent",
+            "amount": 431403000,
+            "treatment": "DEDUCTED",
+            "label": "Current operating lease obligation"
+          },
+          {
+            "tag": "ShortTermBorrowings",
+            "amount": 2483758000,
+            "treatment": "DEDUCTED",
+            "label": "Current short-term borrowing"
+          },
+          {
+            "tag": "ContractWithCustomerLiabilityCurrent",
+            "amount": 1797456000,
+            "treatment": "EXCLUDED",
+            "label": "Deferred or unearned revenue"
+          }
+        ],
+        "status": "INCOMPLETE"
+      },
+      "filingSource": {
+        "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm",
+        "retrievedAt": "2026-09-13T00:52:53.943Z",
+        "bytes": 1815616,
+        "sha256": "3788192096c4b7844008f4803ae0ad64efebc2d0c6fab64b97bc94a728ffb5c2",
+        "latencyMs": 144
+      },
+      "sharesOutstanding": {
+        "value": 4163939676,
+        "asOfDate": "2026-06-30"
+      }
+    },
+    {
+      "form": "10-Q",
+      "filingDate": "2026-04-17",
+      "reportDate": "2026-03-31",
+      "accession": "0001065280-26-000138",
+      "primaryDocument": "nflx-20260331.htm",
+      "facts": {
+        "CashAndCashEquivalentsAtCarryingValue": 12259772000,
+        "AvailableForSaleSecuritiesDebtSecuritiesCurrent": null,
+        "MarketableSecuritiesCurrent": null,
+        "AccountsReceivableNetCurrent": null,
+        "AccountsNotesAndLoansReceivableNetCurrent": null,
+        "InventoryNet": null,
+        "OperatingLeaseLiabilityCurrent": 433478000,
+        "LesseeOperatingLeaseLiabilityPaymentsDueNextTwelveMonths": null,
+        "LongTermDebtCurrent": null,
+        "NotesPayableCurrent": null,
+        "ShortTermBorrowings": 999185000,
+        "CommercialPaper": null,
+        "AccruedSalariesCurrentAndNoncurrent": null,
+        "EmployeeRelatedLiabilitiesCurrent": null,
+        "TaxesPayableCurrent": null,
+        "AccountsPayableAndOtherAccruedLiabilitiesCurrent": null,
+        "AccountsPayableCurrent": 894681000,
+        "LiabilitiesCurrent": 12131578000,
+        "OtherLiabilitiesCurrent": null,
+        "ContractWithCustomerLiabilityCurrent": 1743448000,
+        "DeferredRevenueCurrent": null
+      },
+      "factSources": {
+        "CashAndCashEquivalentsAtCarryingValue": "COMPANY_FACTS",
+        "OperatingLeaseLiabilityCurrent": "COMPANY_FACTS",
+        "ShortTermBorrowings": "COMPANY_FACTS",
+        "AccountsPayableCurrent": "COMPANY_FACTS",
+        "LiabilitiesCurrent": "COMPANY_FACTS",
+        "ContractWithCustomerLiabilityCurrent": "COMPANY_FACTS"
+      },
+      "liabilityReconciliation": {
+        "control": 12131578000,
+        "classified": 4070792000,
+        "delta": 8060786000,
+        "items": [
+          {
+            "tag": "AccountsPayableCurrent",
+            "amount": 894681000,
+            "treatment": "DEDUCTED",
+            "label": "Trade accounts payable"
+          },
+          {
+            "tag": "OperatingLeaseLiabilityCurrent",
+            "amount": 433478000,
+            "treatment": "DEDUCTED",
+            "label": "Current operating lease obligation"
+          },
+          {
+            "tag": "ShortTermBorrowings",
+            "amount": 999185000,
+            "treatment": "DEDUCTED",
+            "label": "Current short-term borrowing"
+          },
+          {
+            "tag": "ContractWithCustomerLiabilityCurrent",
+            "amount": 1743448000,
+            "treatment": "EXCLUDED",
+            "label": "Deferred or unearned revenue"
+          }
+        ],
+        "status": "INCOMPLETE"
+      },
+      "filingSource": {
+        "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000138/nflx-20260331.htm",
+        "retrievedAt": "2026-09-13T00:52:54.085Z",
+        "bytes": 1231266,
+        "sha256": "5b6cce0a2e4f8a87ac31bf0228d00ad3379a90133d20b77e7c737f368ae70f58",
+        "latencyMs": 133
+      },
+      "sharesOutstanding": {
+        "value": 4212794271,
+        "asOfDate": "2026-03-31"
+      }
+    },
+    {
+      "form": "10-K",
+      "filingDate": "2026-01-23",
+      "reportDate": "2025-12-31",
+      "accession": "0001065280-26-000034",
+      "primaryDocument": "nflx-20251231.htm",
+      "facts": {
+        "CashAndCashEquivalentsAtCarryingValue": 9033681000,
+        "AvailableForSaleSecuritiesDebtSecuritiesCurrent": null,
+        "MarketableSecuritiesCurrent": null,
+        "AccountsReceivableNetCurrent": null,
+        "AccountsNotesAndLoansReceivableNetCurrent": null,
+        "InventoryNet": null,
+        "OperatingLeaseLiabilityCurrent": 460475000,
+        "LesseeOperatingLeaseLiabilityPaymentsDueNextTwelveMonths": null,
+        "LongTermDebtCurrent": null,
+        "NotesPayableCurrent": null,
+        "ShortTermBorrowings": 998865000,
+        "CommercialPaper": null,
+        "AccruedSalariesCurrentAndNoncurrent": null,
+        "EmployeeRelatedLiabilitiesCurrent": null,
+        "TaxesPayableCurrent": null,
+        "AccountsPayableAndOtherAccruedLiabilitiesCurrent": null,
+        "AccountsPayableCurrent": 900612000,
+        "LiabilitiesCurrent": 10980930000,
+        "OtherLiabilitiesCurrent": null,
+        "ContractWithCustomerLiabilityCurrent": 1775730000,
+        "DeferredRevenueCurrent": null
+      },
+      "factSources": {
+        "CashAndCashEquivalentsAtCarryingValue": "COMPANY_FACTS",
+        "OperatingLeaseLiabilityCurrent": "COMPANY_FACTS",
+        "ShortTermBorrowings": "COMPANY_FACTS",
+        "AccountsPayableCurrent": "COMPANY_FACTS",
+        "LiabilitiesCurrent": "COMPANY_FACTS",
+        "ContractWithCustomerLiabilityCurrent": "COMPANY_FACTS"
+      },
+      "liabilityReconciliation": {
+        "control": 10980930000,
+        "classified": 4135682000,
+        "delta": 6845248000,
+        "items": [
+          {
+            "tag": "AccountsPayableCurrent",
+            "amount": 900612000,
+            "treatment": "DEDUCTED",
+            "label": "Trade accounts payable"
+          },
+          {
+            "tag": "OperatingLeaseLiabilityCurrent",
+            "amount": 460475000,
+            "treatment": "DEDUCTED",
+            "label": "Current operating lease obligation"
+          },
+          {
+            "tag": "ShortTermBorrowings",
+            "amount": 998865000,
+            "treatment": "DEDUCTED",
+            "label": "Current short-term borrowing"
+          },
+          {
+            "tag": "ContractWithCustomerLiabilityCurrent",
+            "amount": 1775730000,
+            "treatment": "EXCLUDED",
+            "label": "Deferred or unearned revenue"
+          }
+        ],
+        "status": "INCOMPLETE"
+      },
+      "filingSource": {
+        "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/nflx-20251231.htm",
+        "retrievedAt": "2026-09-13T00:52:54.278Z",
+        "bytes": 2137739,
+        "sha256": "47f992a70276ea6a071fe82960de58bab9d1bb74b0ca8e0fbd09f03a25187603",
+        "latencyMs": 175
+      },
+      "sharesOutstanding": {
+        "value": 4222162150,
+        "asOfDate": "2025-12-31"
+      }
+    },
+    {
+      "form": "10-Q",
+      "filingDate": "2025-10-22",
+      "reportDate": "2025-09-30",
+      "accession": "0001065280-25-000406",
+      "primaryDocument": "nflx-20250930.htm",
+      "facts": {
+        "CashAndCashEquivalentsAtCarryingValue": 9287287000,
+        "AvailableForSaleSecuritiesDebtSecuritiesCurrent": null,
+        "MarketableSecuritiesCurrent": null,
+        "AccountsReceivableNetCurrent": null,
+        "AccountsNotesAndLoansReceivableNetCurrent": null,
+        "InventoryNet": null,
+        "OperatingLeaseLiabilityCurrent": 457390000,
+        "LesseeOperatingLeaseLiabilityPaymentsDueNextTwelveMonths": null,
+        "LongTermDebtCurrent": null,
+        "NotesPayableCurrent": null,
+        "ShortTermBorrowings": 0,
+        "CommercialPaper": null,
+        "AccruedSalariesCurrentAndNoncurrent": null,
+        "EmployeeRelatedLiabilitiesCurrent": null,
+        "TaxesPayableCurrent": null,
+        "AccountsPayableAndOtherAccruedLiabilitiesCurrent": null,
+        "AccountsPayableCurrent": 793233000,
+        "LiabilitiesCurrent": 9731859000,
+        "OtherLiabilitiesCurrent": null,
+        "ContractWithCustomerLiabilityCurrent": 1724675000,
+        "DeferredRevenueCurrent": null
+      },
+      "factSources": {
+        "CashAndCashEquivalentsAtCarryingValue": "COMPANY_FACTS",
+        "OperatingLeaseLiabilityCurrent": "COMPANY_FACTS",
+        "ShortTermBorrowings": "COMPANY_FACTS",
+        "AccountsPayableCurrent": "COMPANY_FACTS",
+        "LiabilitiesCurrent": "COMPANY_FACTS",
+        "ContractWithCustomerLiabilityCurrent": "COMPANY_FACTS"
+      },
+      "liabilityReconciliation": {
+        "control": 9731859000,
+        "classified": 2975298000,
+        "delta": 6756561000,
+        "items": [
+          {
+            "tag": "AccountsPayableCurrent",
+            "amount": 793233000,
+            "treatment": "DEDUCTED",
+            "label": "Trade accounts payable"
+          },
+          {
+            "tag": "OperatingLeaseLiabilityCurrent",
+            "amount": 457390000,
+            "treatment": "DEDUCTED",
+            "label": "Current operating lease obligation"
+          },
+          {
+            "tag": "ContractWithCustomerLiabilityCurrent",
+            "amount": 1724675000,
+            "treatment": "EXCLUDED",
+            "label": "Deferred or unearned revenue"
+          }
+        ],
+        "status": "INCOMPLETE"
+      },
+      "filingSource": {
+        "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528025000406/nflx-20250930.htm",
+        "retrievedAt": "2026-09-13T00:52:54.395Z",
+        "bytes": 1711602,
+        "sha256": "76745f4da9c5ba3f07cbf38b003dce7f75b26e247473ab49d82c919fe936acde",
+        "latencyMs": 113
+      },
+      "sharesOutstanding": {
+        "value": 423732334,
+        "asOfDate": "2025-09-30"
+      }
+    }
+  ]
+}

@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-08T00:40:19.326Z",
+  "generatedAt": "2026-09-13T00:52:49.177Z",
   "source": {
     "url": "https://www.sec.gov/files/company_tickers.json",
-    "retrievedAt": "2026-09-08T00:40:19.279Z",
-    "bytes": 796994,
-    "sha256": "f987a9fba01e1c1858ddcf0c032d77be301843860d7a0571efaa92ec3f938926",
-    "latencyMs": 192
+    "retrievedAt": "2026-09-13T00:52:49.114Z",
+    "bytes": 797931,
+    "sha256": "26602b2fd871aa1815bdc33fa234308f9c82f0ee6b939d16b2e2b9b1b4bfdaef",
+    "latencyMs": 219
   },
   "issuers": {
     "CRM": {
@@ -31,6 +31,30 @@
       "cik": "0000320193",
       "path": "catalog/issuers/0000320193-aapl.json",
       "sha256": "0c380c0ba3c9c94296298d3a656d9529a301ebc93dbd02bfa01d5353e5d9db2b",
+      "classification": "OPERATING_COMPANY"
+    },
+    "BIIB": {
+      "cik": "0000875045",
+      "path": "catalog/issuers/0000875045-biib.json",
+      "sha256": "92bd9e2025f2785b5c2a10b2ff53996887c6f0e7fbdc14318bdf8aff33acc1d5",
+      "classification": "OPERATING_COMPANY"
+    },
+    "GM": {
+      "cik": "0001467858",
+      "path": "catalog/issuers/0001467858-gm.json",
+      "sha256": "285f5f48f3b39cd9e6b14f7f0654a3e57633d1be5affc91ec685692e145e775b",
+      "classification": "OPERATING_COMPANY"
+    },
+    "GOOG": {
+      "cik": "0001652044",
+      "path": "catalog/issuers/0001652044-goog.json",
+      "sha256": "5fc589959df51311828a627c8a30faaa52f6593d65320ca89e38344b8a3892fc",
+      "classification": "OPERATING_COMPANY"
+    },
+    "NFLX": {
+      "cik": "0001065280",
+      "path": "catalog/issuers/0001065280-nflx.json",
+      "sha256": "e56d90ad5b554424edd6ae7d7c644799444408a3fd2bc4eb7b72c6d01e6d1a31",
       "classification": "OPERATING_COMPANY"
     }
   }

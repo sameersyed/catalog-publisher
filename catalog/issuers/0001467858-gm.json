@@ -1,0 +1,296 @@
+{
+  "schemaVersion": 1,
+  "methodologyVersion": "aaofi-investor-v2",
+  "ticker": "GM",
+  "issuer": "General Motors Co",
+  "cik": "0001467858",
+  "sic": "3711",
+  "classification": "OPERATING_COMPANY",
+  "exchange": "NYSE",
+  "publishedAt": "2026-09-13T00:52:50.582Z",
+  "sources": {
+    "submissions": {
+      "url": "https://data.sec.gov/submissions/CIK0001467858.json",
+      "retrievedAt": "2026-09-13T00:52:50.726Z",
+      "bytes": 164664,
+      "sha256": "3b748d6fb8ed82a98a220f115b7c76edaec79a50c8a45d714df4a4938a2fcaac",
+      "latencyMs": 144
+    },
+    "companyFacts": {
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001467858.json",
+      "retrievedAt": "2026-09-13T00:52:51.712Z",
+      "bytes": 3606453,
+      "sha256": "0aadbfd12c0d97ba9743acec6b3ad5b0b6082fab7fbc8f1edbbb7d38fe050e38",
+      "latencyMs": 986
+    }
+  },
+  "filings": [
+    {
+      "form": "10-Q",
+      "filingDate": "2026-07-21",
+      "reportDate": "2026-06-30",
+      "accession": "0001467858-26-000051",
+      "primaryDocument": "gm-20260630.htm",
+      "facts": {
+        "CashAndCashEquivalentsAtCarryingValue": 20134000000,
+        "AvailableForSaleSecuritiesDebtSecuritiesCurrent": 4585000000,
+        "MarketableSecuritiesCurrent": null,
+        "AccountsReceivableNetCurrent": 16770000000,
+        "AccountsNotesAndLoansReceivableNetCurrent": null,
+        "InventoryNet": 15950000000,
+        "OperatingLeaseLiabilityCurrent": null,
+        "LesseeOperatingLeaseLiabilityPaymentsDueNextTwelveMonths": null,
+        "LongTermDebtCurrent": null,
+        "NotesPayableCurrent": null,
+        "ShortTermBorrowings": null,
+        "CommercialPaper": null,
+        "AccruedSalariesCurrentAndNoncurrent": null,
+        "EmployeeRelatedLiabilitiesCurrent": null,
+        "TaxesPayableCurrent": null,
+        "AccountsPayableAndOtherAccruedLiabilitiesCurrent": null,
+        "AccountsPayableCurrent": 28840000000,
+        "LiabilitiesCurrent": 96834000000,
+        "OtherLiabilitiesCurrent": null,
+        "ContractWithCustomerLiabilityCurrent": null,
+        "DeferredRevenueCurrent": null
+      },
+      "factSources": {
+        "CashAndCashEquivalentsAtCarryingValue": "COMPANY_FACTS",
+        "AvailableForSaleSecuritiesDebtSecuritiesCurrent": "COMPANY_FACTS",
+        "AccountsReceivableNetCurrent": "COMPANY_FACTS",
+        "InventoryNet": "COMPANY_FACTS",
+        "AccountsPayableCurrent": "COMPANY_FACTS",
+        "LiabilitiesCurrent": "COMPANY_FACTS"
+      },
+      "liabilityReconciliation": {
+        "control": 96834000000,
+        "classified": 28840000000,
+        "delta": 67994000000,
+        "items": [
+          {
+            "tag": "AccountsPayableCurrent",
+            "amount": 28840000000,
+            "treatment": "DEDUCTED",
+            "label": "Trade accounts payable"
+          }
+        ],
+        "status": "INCOMPLETE"
+      },
+      "filingSource": {
+        "url": "https://www.sec.gov/Archives/edgar/data/1467858/000146785826000051/gm-20260630.htm",
+        "retrievedAt": "2026-09-13T00:52:51.847Z",
+        "bytes": 3002037,
+        "sha256": "450ce0b60e5bbf9e036a5e8da29ccbadaf3d4a368b74fe97e93c580477643710",
+        "latencyMs": 134
+      },
+      "sharesOutstanding": {
+        "value": 877451541,
+        "asOfDate": "2026-07-10"
+      }
+    },
+    {
+      "form": "10-Q",
+      "filingDate": "2026-04-28",
+      "reportDate": "2026-03-31",
+      "accession": "0001467858-26-000035",
+      "primaryDocument": "gm-20260331.htm",
+      "facts": {
+        "CashAndCashEquivalentsAtCarryingValue": 19800000000,
+        "AvailableForSaleSecuritiesDebtSecuritiesCurrent": 4618000000,
+        "MarketableSecuritiesCurrent": null,
+        "AccountsReceivableNetCurrent": 16381000000,
+        "AccountsNotesAndLoansReceivableNetCurrent": null,
+        "InventoryNet": 15590000000,
+        "OperatingLeaseLiabilityCurrent": null,
+        "LesseeOperatingLeaseLiabilityPaymentsDueNextTwelveMonths": null,
+        "LongTermDebtCurrent": null,
+        "NotesPayableCurrent": null,
+        "ShortTermBorrowings": null,
+        "CommercialPaper": null,
+        "AccruedSalariesCurrentAndNoncurrent": null,
+        "EmployeeRelatedLiabilitiesCurrent": null,
+        "TaxesPayableCurrent": null,
+        "AccountsPayableAndOtherAccruedLiabilitiesCurrent": null,
+        "AccountsPayableCurrent": 27912000000,
+        "LiabilitiesCurrent": 94720000000,
+        "OtherLiabilitiesCurrent": null,
+        "ContractWithCustomerLiabilityCurrent": null,
+        "DeferredRevenueCurrent": null
+      },
+      "factSources": {
+        "CashAndCashEquivalentsAtCarryingValue": "COMPANY_FACTS",
+        "AvailableForSaleSecuritiesDebtSecuritiesCurrent": "COMPANY_FACTS",
+        "AccountsReceivableNetCurrent": "COMPANY_FACTS",
+        "InventoryNet": "COMPANY_FACTS",
+        "AccountsPayableCurrent": "COMPANY_FACTS",
+        "LiabilitiesCurrent": "COMPANY_FACTS"
+      },
+      "liabilityReconciliation": {
+        "control": 94720000000,
+        "classified": 27912000000,
+        "delta": 66808000000,
+        "items": [
+          {
+            "tag": "AccountsPayableCurrent",
+            "amount": 27912000000,
+            "treatment": "DEDUCTED",
+            "label": "Trade accounts payable"
+          }
+        ],
+        "status": "INCOMPLETE"
+      },
+      "filingSource": {
+        "url": "https://www.sec.gov/Archives/edgar/data/1467858/000146785826000035/gm-20260331.htm",
+        "retrievedAt": "2026-09-13T00:52:51.993Z",
+        "bytes": 2329388,
+        "sha256": "e817f396b46ae64eaefa9b926f4abdcc774ad62daaf292fcc266dba56a123661",
+        "latencyMs": 128
+      },
+      "sharesOutstanding": {
+        "value": 901665195,
+        "asOfDate": "2026-04-17"
+      }
+    },
+    {
+      "form": "10-K",
+      "filingDate": "2026-01-27",
+      "reportDate": "2025-12-31",
+      "accession": "0001467858-26-000013",
+      "primaryDocument": "gm-20251231.htm",
+      "facts": {
+        "CashAndCashEquivalentsAtCarryingValue": 20945000000,
+        "AvailableForSaleSecuritiesDebtSecuritiesCurrent": 6724000000,
+        "MarketableSecuritiesCurrent": null,
+        "AccountsReceivableNetCurrent": 13054000000,
+        "AccountsNotesAndLoansReceivableNetCurrent": null,
+        "InventoryNet": 14467000000,
+        "OperatingLeaseLiabilityCurrent": 266000000,
+        "LesseeOperatingLeaseLiabilityPaymentsDueNextTwelveMonths": 321000000,
+        "LongTermDebtCurrent": null,
+        "NotesPayableCurrent": null,
+        "ShortTermBorrowings": null,
+        "CommercialPaper": null,
+        "AccruedSalariesCurrentAndNoncurrent": null,
+        "EmployeeRelatedLiabilitiesCurrent": null,
+        "TaxesPayableCurrent": null,
+        "AccountsPayableAndOtherAccruedLiabilitiesCurrent": null,
+        "AccountsPayableCurrent": 23919000000,
+        "LiabilitiesCurrent": 93342000000,
+        "OtherLiabilitiesCurrent": null,
+        "ContractWithCustomerLiabilityCurrent": 3950000000,
+        "DeferredRevenueCurrent": null
+      },
+      "factSources": {
+        "CashAndCashEquivalentsAtCarryingValue": "COMPANY_FACTS",
+        "AvailableForSaleSecuritiesDebtSecuritiesCurrent": "COMPANY_FACTS",
+        "AccountsReceivableNetCurrent": "COMPANY_FACTS",
+        "InventoryNet": "COMPANY_FACTS",
+        "OperatingLeaseLiabilityCurrent": "COMPANY_FACTS",
+        "LesseeOperatingLeaseLiabilityPaymentsDueNextTwelveMonths": "COMPANY_FACTS",
+        "AccountsPayableCurrent": "COMPANY_FACTS",
+        "LiabilitiesCurrent": "COMPANY_FACTS",
+        "ContractWithCustomerLiabilityCurrent": "COMPANY_FACTS"
+      },
+      "liabilityReconciliation": {
+        "control": 93342000000,
+        "classified": 28135000000,
+        "delta": 65207000000,
+        "items": [
+          {
+            "tag": "AccountsPayableCurrent",
+            "amount": 23919000000,
+            "treatment": "DEDUCTED",
+            "label": "Trade accounts payable"
+          },
+          {
+            "tag": "OperatingLeaseLiabilityCurrent",
+            "amount": 266000000,
+            "treatment": "DEDUCTED",
+            "label": "Current operating lease obligation"
+          },
+          {
+            "tag": "ContractWithCustomerLiabilityCurrent",
+            "amount": 3950000000,
+            "treatment": "EXCLUDED",
+            "label": "Deferred or unearned revenue"
+          }
+        ],
+        "status": "INCOMPLETE"
+      },
+      "filingSource": {
+        "url": "https://www.sec.gov/Archives/edgar/data/1467858/000146785826000013/gm-20251231.htm",
+        "retrievedAt": "2026-09-13T00:52:52.184Z",
+        "bytes": 4119731,
+        "sha256": "62079dfef1451b92c8ea6109f2ef77cd645c3d95b0670c9f03af01010c1ecc74",
+        "latencyMs": 175
+      },
+      "sharesOutstanding": {
+        "value": 903967853,
+        "asOfDate": "2026-01-15"
+      }
+    },
+    {
+      "form": "10-Q",
+      "filingDate": "2025-10-21",
+      "reportDate": "2025-09-30",
+      "accession": "0001467858-25-000143",
+      "primaryDocument": "gm-20250930.htm",
+      "facts": {
+        "CashAndCashEquivalentsAtCarryingValue": 22910000000,
+        "AvailableForSaleSecuritiesDebtSecuritiesCurrent": 6792000000,
+        "MarketableSecuritiesCurrent": null,
+        "AccountsReceivableNetCurrent": 17125000000,
+        "AccountsNotesAndLoansReceivableNetCurrent": null,
+        "InventoryNet": 15318000000,
+        "OperatingLeaseLiabilityCurrent": null,
+        "LesseeOperatingLeaseLiabilityPaymentsDueNextTwelveMonths": null,
+        "LongTermDebtCurrent": null,
+        "NotesPayableCurrent": null,
+        "ShortTermBorrowings": null,
+        "CommercialPaper": null,
+        "AccruedSalariesCurrentAndNoncurrent": null,
+        "EmployeeRelatedLiabilitiesCurrent": null,
+        "TaxesPayableCurrent": null,
+        "AccountsPayableAndOtherAccruedLiabilitiesCurrent": null,
+        "AccountsPayableCurrent": 27317000000,
+        "LiabilitiesCurrent": 93295000000,
+        "OtherLiabilitiesCurrent": null,
+        "ContractWithCustomerLiabilityCurrent": null,
+        "DeferredRevenueCurrent": null
+      },
+      "factSources": {
+        "CashAndCashEquivalentsAtCarryingValue": "COMPANY_FACTS",
+        "AvailableForSaleSecuritiesDebtSecuritiesCurrent": "COMPANY_FACTS",
+        "AccountsReceivableNetCurrent": "COMPANY_FACTS",
+        "InventoryNet": "COMPANY_FACTS",
+        "AccountsPayableCurrent": "COMPANY_FACTS",
+        "LiabilitiesCurrent": "COMPANY_FACTS"
+      },
+      "liabilityReconciliation": {
+        "control": 93295000000,
+        "classified": 27317000000,
+        "delta": 65978000000,
+        "items": [
+          {
+            "tag": "AccountsPayableCurrent",
+            "amount": 27317000000,
+            "treatment": "DEDUCTED",
+            "label": "Trade accounts payable"
+          }
+        ],
+        "status": "INCOMPLETE"
+      },
+      "filingSource": {
+        "url": "https://www.sec.gov/Archives/edgar/data/1467858/000146785825000143/gm-20250930.htm",
+        "retrievedAt": "2026-09-13T00:52:52.357Z",
+        "bytes": 3097594,
+        "sha256": "cbf6d5d0f12b23f4fa641f0cc8aafbb5346890f52dec9a7c653268738f1c5e69",
+        "latencyMs": 170
+      },
+      "sharesOutstanding": {
+        "value": 932861303,
+        "asOfDate": "2025-10-10"
+      }
+    }
+  ]
+}
