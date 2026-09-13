@@ -2,6 +2,10 @@
 
 const test = require('node:test');
 const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const os = require('node:os');
+const path = require('node:path');
+const childProcess = require('node:child_process');
 const {artifactEntry, buildArtifact, extractInlineFacts, isSupportedSic, liabilityReconciliation,
   selectBatch, uniqueUniverse} = require('./lib/catalog');
 
@@ -63,6 +67,35 @@ test('publishes a verified foreign private issuer from a 20-F for Investor proxy
     '2026-09-07T00:00:00.000Z');
   assert.equal(artifact.classification, 'FOREIGN_PRIVATE_ISSUER');
   assert.equal(artifact.filings[0].form, '20-F');
+});
+
+test('validates a catalog containing verified 20-F evidence', () => {
+  const data = fixture();
+  data.submissions.json.sic = '6211';
+  data.submissions.json.filings.recent.form = ['20-F'];
+  data.submissions.json.filings.recent.filingDate = ['2026-05-02'];
+  data.submissions.json.filings.recent.reportDate = ['2026-05-01'];
+  const artifact = buildArtifact('EXM', '0000000001', data.submissions, data.facts,
+    '2026-09-07T00:00:00.000Z', [{text: '', source: source(
+      'https://www.sec.gov/Archives/edgar/data/1/000000000126000001/q.htm')}]);
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'catalog-validator-'));
+  const relativePath = 'catalog/issuers/0000000001-exm.json';
+  const text = JSON.stringify(artifact, null, 2) + '\n';
+  fs.mkdirSync(path.join(root, 'catalog', 'issuers'), {recursive: true});
+  fs.writeFileSync(path.join(root, relativePath), text);
+  fs.writeFileSync(path.join(root, 'catalog', 'index.json'), JSON.stringify({
+    schemaVersion: 1,
+    generatedAt: '2026-09-07T00:00:00.000Z',
+    source: source('https://www.sec.gov/files/company_tickers.json'),
+    issuers: {EXM: artifactEntry(artifact, relativePath, text)}
+  }));
+  try {
+    const output = childProcess.execFileSync(process.execPath,
+      [path.join(__dirname, 'validate-poc.js'), root], {encoding: 'utf8'});
+    assert.match(output, /"status": "PASS"/);
+  } finally {
+    fs.rmSync(root, {recursive: true, force: true});
+  }
 });
 
 test('extracts issuer filing-table facts from dimensionless instant contexts', () => {

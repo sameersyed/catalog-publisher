@@ -28,7 +28,7 @@ for (const [ticker, entry] of Object.entries(index.issuers)) {
     throw new Error(`${ticker} artifact schema is invalid.`);
   }
   for (const filing of artifact.filings) {
-    if (!['10-Q', '10-K'].includes(filing.form) || filing.filingDate < filing.reportDate ||
+    if (!['10-Q', '10-K', '20-F'].includes(filing.form) || filing.filingDate < filing.reportDate ||
         !/^\d{10}-\d{2}-\d{6}$/.test(filing.accession) || !filing.facts) {
       throw new Error(`${ticker} has invalid filing metadata.`);
     }
