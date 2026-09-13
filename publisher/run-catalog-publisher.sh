@@ -33,4 +33,4 @@ if [ -n "$(git -C "$ROOT" status --porcelain -- catalog)" ]; then
   exit 1
 fi
 
-node "$PUBLISHER/process-queue.js"
+node "$PUBLISHER/process-queue.js" "$@"

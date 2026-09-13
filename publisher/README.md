@@ -40,8 +40,9 @@ after the queue's lease timeout.
 
 If a terminal queue request must be retried after a validator, commit, or push defect, first deploy the
 queue source that supports authenticated retry, then run
-`node publisher/process-queue.js <terminal-request-uuid>`. This appends a new `PENDING` audit row rather
-than editing history. Run `run-stock-evidence` afterward.
+`run-stock-evidence <terminal-request-uuid>`. This loads the protected publisher environment and appends
+a new `PENDING` audit row rather than editing history. Run `run-stock-evidence` again without an argument
+to process it.
 
 Install `stock-evidence-catalog.service` and `.timer` under `~/.config/systemd/user/`, and store the
 contact header in mode-600 `~/.config/stock-evidence/catalog.env`:

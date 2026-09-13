@@ -23,7 +23,7 @@ set -a
 . "$ENV_FILE"
 set +a
 
-if "$RUNNER"; then
+if "$RUNNER" "$@"; then
   status=0
 else
   status=$?
